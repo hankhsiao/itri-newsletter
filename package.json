@@ -7,13 +7,6 @@
     "type": "git",
     "url": "https://github.com/hankhsiao/itri-newsletter.git"
   },
-  "keywords": [
-    "ITRI",
-    "newsletter",
-    "generator"
-  ],
-  "scripts": {
-  },
   "dependencies": {
     "async": "^2.1.4",
     "csvtojson": "^1.0.3",
@@ -22,5 +15,6 @@
     "request": "^2.79.0",
     "shortid": "^2.2.6",
     "underscore": "^1.8.3"
-  }
+  },
+  "license": "BSD"
 }
