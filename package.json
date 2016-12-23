@@ -1,0 +1,26 @@
+{
+  "name": "itri-newsletter-generator",
+  "version": "0.1.0",
+  "description": "ITRI newsletter generator",
+  "author": "Hank Hsiao",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hankhsiao/itri-newsletter-generator.js.git"
+  },
+  "keywords": [
+    "ITRI",
+    "newsletter",
+    "generator"
+  ],
+  "scripts": {
+  },
+  "dependencies": {
+    "async": "^2.1.4",
+    "csvtojson": "^1.0.3",
+    "handlebars": "^4.0.6",
+    "inline-css": "^2.2.2",
+    "request": "^2.79.0",
+    "shortid": "^2.2.6",
+    "underscore": "^1.8.3"
+  }
+}

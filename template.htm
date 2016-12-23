@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{general.title}}</title>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      font-family: "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", "微软雅黑", Tahoma, Verdana, Geneva, sans-serif;
+      margin: 24px auto;
+      width: 980px;
+    }
+
+    p {
+      line-height: 1.4;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-style: italic;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .toc-div, .contents-div {
+      color: red;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .chapter-div {
+      color: red;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .category-div, .div-div {
+      color: red;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px;
+    }
+
+    .figure {
+      display: inline-block;
+      float: right;
+      margin: 20px;
+    }
+    .figure img, .figure .figcaption {
+      max-width: 500px;
+    }
+
+    .figure .figcaption {
+      color: gray;
+      font-size: 14px;
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+    .source {
+      color: gray;
+      font-size: 13px;
+      font-style: italic;
+    }
+
+    .go-to-top {
+      display: block;
+      margin: 16px 0;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .greeting-section {
+      font-size: 20px;
+      margin: 40px 20px;
+    }
+    .greeting {
+      color: red;
+      font-size: 28px;
+      font-style: italic;
+      text-align: center;
+    }
+    .greeting-footer {
+      text-align: right;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <a name="top"></a>
+  <h1 class="title">{{general.title}}</h1>
+  <h2 class="subtitle">{{general.subtitle}}</h2>
+
+  <div class="summary">
+    <div>本期要聞如下：</div>
+    <ol>
+      {{#each highlight}}
+      <li><a href="#{{id}}">{{title}}</a></li>
+      {{/each}}
+    </ol>
+    <div class="greeting-section">
+      <p>祝　您</p>
+      <p class="greeting">身體健康　萬事如意!!!</p>
+      <p class="greeting-footer">
+        工研院北美公司    王韶華 敬啟<br/>
+        {{general.author}} 編輯<br/>
+        ({{general.date}})
+      </p>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="toc">
+    <div class="toc-div">本期目錄</div>
+    <div class="chapter">
+      <div class="chapter-div"><a href="#technology">一、科技訊息</a></div>
+      {{#each techCategories as |category|}}
+        {{#withItem ../technology key=category}}
+          {{#if this}}
+          <div class="category">
+            <div class="category-div"><a href="#{{category}}">{{category}}</a></div>
+            <ol>
+            {{#each this}}
+              <li><a href="#{{id}}">{{title}}</a></li>
+            {{/each}}
+            </ol>
+          </div>
+          {{/if}}
+        {{/withItem}}
+      {{/each}}
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-div"><a href="#industry">二、產業與廠商動態</a></div>
+      <div class="div">
+        <ol>
+          {{#each industry}}
+          <li><a href="#{{id}}">{{title}}</a></li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-div"><a href="#conference">三、北美研討會訊息</a></div>
+      {{#each conference as |conf category|}}
+      <div class="category">
+        <div class="category-div"><a href="#{{category}}">{{category}}</a></div>
+        <ol>
+          {{#each conf}}
+          <li><a href="#{{id}}">{{title}}</a></li>
+          {{/each}}
+        </ol>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <hr/>
+
+  <main class="contents">
+    <div class="contents-div">本期內容</div>
+    <div class="chapter">
+      <a name="technology"></a>
+      <div class="chapter-div">一、科技訊息</div>
+      {{#each techCategories as |category|}}
+        {{#withItem ../technology key=category}}
+          {{#if this}}
+          <div class="category">
+            <a name="{{category}}"></a>
+            <div class="category-div">{{category}}</div>
+            <ol>
+            {{#each this}}
+              <li>
+                <div class="article">
+                  <a name="{{id}}"></a>
+                  <div><a href="{{url}}" target="_blank">{{title}}</a></div>
+                  {{#if image1}}
+                    <div class="figure">
+                      <img src="{{image1}}"/>
+                      <div class="figcaption">{{caption1}}</div>
+                    </div>
+                  {{/if}}
+                  <p>
+                    {{summary}} <span class="source">-- {{source}}, {{date}}</span>
+                  </p>
+                </div>
+              </li>
+            {{/each}}
+            </ol>
+            <a class="go-to-top" href="#top">
+              Go to Top
+            </a>
+          </div>
+          {{/if}}
+        {{/withItem}}
+      {{/each}}
+    </div>
+    <div class="contents-chapter">
+      <a name="industry"></a>
+      <div class="chapter-div">二、產業與廠商動態</div>
+      <ol>
+      {{#each industry}}
+        <li>
+          <div class="article">
+            <a name="{{id}}"></a>
+            <div><a href="{{url}}" target="_blank">{{title}}</a></div>
+            <p>
+              {{summary}} <span class="source">-- {{source}}, {{date}}</span>
+            </p>
+          </div>
+        </li>
+      {{/each}}
+      </ol>
+      <a class="go-to-top" href="#top">
+        Go to Top
+      </a>
+    </div>
+    <div class="chapter">
+      <a name="conference"></a>
+      <div class="chapter-div">三、北美研討會訊息</div>
+      {{#each conference as |conf category|}}
+      <div class="div">
+        <a name="{{category}}"></a>
+        <div class="div-div">{{category}}</div>
+        <ol>
+          {{#each conf}}
+          <li>
+            <p>
+              <a name="{{id}}"></a>
+              <a href="{{url}}" target="_blank">{{title}}</a><br/>
+              {{start_date}} ~ {{end_date}}<br/>
+              {{location}}
+            </p>
+          </li>
+          {{/each}}
+        </ol>
+        <a class="go-to-top" href="#top">
+          Go to Top
+        </a>
+      </div>
+      {{/each}}
+    </div>
+  </main>
+</body>
+</html>
