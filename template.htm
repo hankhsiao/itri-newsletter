@@ -180,8 +180,9 @@
             {{#each this}}
               <li>
                 <div class="article">
-                  <a name="{{id}}"></a>
-                  <div><a href="{{url}}" target="_blank">{{title}}</a></div>
+                  <div>
+                    <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a>
+                  </div>
                   {{#if image1}}
                     <div class="figure">
                       <img src="{{image1}}"/>
@@ -210,8 +211,9 @@
       {{#each industry}}
         <li>
           <div class="article">
-            <a name="{{id}}"></a>
-            <div><a href="{{url}}" target="_blank">{{title}}</a></div>
+            <div>
+              <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a>
+            </div>
             <p>
               {{summary}} <span class="source">-- {{source}}, {{date}}</span>
             </p>
@@ -234,8 +236,7 @@
           {{#each conf}}
           <li>
             <p>
-              <a name="{{id}}"></a>
-              <a href="{{url}}" target="_blank">{{title}}</a><br/>
+              <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a><br/>
               {{start_date}} ~ {{end_date}}<br/>
               {{location}}
             </p>
