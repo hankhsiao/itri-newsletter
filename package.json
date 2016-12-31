@@ -7,9 +7,14 @@
     "type": "git",
     "url": "https://github.com/hankhsiao/itri-newsletter.git"
   },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "async": "^2.1.4",
     "csvtojson": "^1.0.3",
+    "express": "4.13.3",
     "handlebars": "^4.0.6",
     "inline-css": "^2.2.2",
     "request": "^2.79.0",
