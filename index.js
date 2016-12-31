@@ -1,5 +1,5 @@
 const express = require('express');
-const generateNewsletter = require('./lib/generateNewsletter');
+const generateNewsletter = require('lib/generateNewsletter');
 
 const app = express();
 
