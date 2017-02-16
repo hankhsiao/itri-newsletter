@@ -214,6 +214,12 @@
             <div>
               <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a>
             </div>
+            {{#if image1}}
+              <div class="figure">
+                <img src="{{image1}}"/>
+                <div class="figcaption">{{caption1}}</div>
+              </div>
+            {{/if}}
             <p>
               {{summary}} <span class="source">-- {{source}}, {{date}}</span>
             </p>
