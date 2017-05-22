@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "async": "^2.1.4",
+    "node-branch-io": "^2.0.0",
     "csvtojson": "^1.0.3",
     "express": "4.13.3",
     "handlebars": "^4.0.6",
