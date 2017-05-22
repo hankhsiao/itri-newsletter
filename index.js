@@ -5,8 +5,8 @@ const app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.get('/', function(request, response) {
-  generateNewsletter(output => {
+app.get('/:ver?', function(request, response) {
+  generateNewsletter(request.params.ver, output => {
     response.send(output);
   });
 });
