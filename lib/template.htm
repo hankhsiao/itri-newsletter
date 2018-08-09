@@ -1,13 +1,49 @@
+<!-- _____Notes_____
+  Change log:
+    1. (reverted back) added banner to Title
+    2. (see 7) added fixed position button to go back all the way top
+    3. (reverted back) added table for 北美研討會訊息
+    4. (see 7) added an indexMenu to the left side
+    5. (reverted back) added text-align=justify to article class
+    6. change indexMenu list to 一、科技訊息, instead of 1.科技訊息
+    7. combined go-to-top & indexmenu
+
+  Suggestions:
+    - add table of sub-topic after big-topic (本期內容 -> 一、科技訊息 -> table)
+    - find a way to distinguish different topics (line, border, color for entrie section, etc.)
+    - add more buttons to go from article to big topic (create <a>Go To Top</a> and href to current topic)
+    - fit the picture better
+    - fix color if needed
+    - add table of links to each article under the topic
+    
+  Style Choices:
+    - banner: blue banner or ITRI icon?
+    - summary: have border or no?
+    - sub-topic table: delete or keep? (due to index menu)
+-->
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>{{general.title}}</title>
-  <meta charset="utf-8" />
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+      margin: 50px;
+      padding: 5px;
+    }
+
     body {
       font-family: "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", "微软雅黑", Tahoma, Verdana, Geneva, sans-serif;
       margin: 24px auto;
       width: 980px;
+      /*background-color:lightgrey;*/
+      border-radius: 20px;
     }
 
     p {
@@ -33,6 +69,11 @@
       text-align: center;
     }
 
+    .chapter {
+      /*padding: 20px;
+      margin: 5px;*/
+    }
+
     .chapter-div {
       color: red;
       font-size: 24px;
@@ -43,7 +84,11 @@
       color: red;
       font-size: 20px;
       font-weight: bold;
-      margin: 20px;
+      margin: 20px; 
+    }
+
+    .article{
+      text-align: left;
     }
 
     .figure {
@@ -82,12 +127,14 @@
       font-size: 20px;
       margin: 40px 20px;
     }
+
     .greeting {
       color: red;
       font-size: 28px;
       font-style: italic;
       text-align: center;
     }
+
     .greeting-footer {
       text-align: right;
       font-size: 16px;
@@ -98,16 +145,119 @@
       visibility: hidden;
       width: 0;
     }
+
+    #indexMenu {
+      display: none;
+      border-radius: 10px;
+      position: fixed;
+      height: auto; /*313px;*/
+      width: auto; /*195px;*/
+      right: 20px;
+      bottom: 70px;
+      border-style: none;
+      border-width: 1px;
+      background-color: lightgrey;
+      padding-left: 10px;
+      padding-right: 10px;
+      opacity: 1;
+
+    }
+    #indexMenu a {
+      color:blue;
+      text-decoration: none;
+    }
+
+    #IM_content li {
+      margin:3px;
+    }
+
+    #myBtn {
+      display: block;
+      position: fixed;
+      text-align: center;
+      width: auto;
+      height: auto;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: #42A5F5;  /*#0277BD;*/
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    #myBtn:hover {
+      background-color: #555;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      #indexMenu { 
+        font-size:70px;
+        margin-bottom: :10px;
+      }
+      #myBtn {
+        font-size:50px;
+      }
+    }
+
+    @media screen and (max-height: 600px) {
+
+      #indexMenu { 
+        font-size:23px;
+        margin-bottom:0px;
+      }
+      #myBtn {
+        font-size:20px;
+      }
+    }
+
   </style>
 </head>
 <body>
+  
+  <!-- button to go to top of page -->
+  <button onclick="show_shortcut()" id="myBtn" title="Go to top">Go To</button>
+
+  <!-- <div style="background: #42A5F5;width:100vw; position:absolute; margin-top: 0px; margin-left:-50vw; top:0px;left:50%; padding:3px;height:30px"> </div> -->
+  <!-- <div style="background-image: url('http://blog.internshala.com/wp-content/uploads/2012/01/itri.jpg');"> -->
+  <!-- <div style="background: #42A5F5;width:100vw; position:relative; margin-top: 0px; margin-left:-50vw; top:0px;left:0px; padding:3px;margin-bottom: 20px"> -->
   <img class="pixel" src="{{general.pixel}}"/>
   <a name="top"></a>
   <h1 class="title">{{general.title}}</h1>
   <h2 class="subtitle">{{general.subtitle}}</h2>
 
+  <div id = "indexMenu" style="font-weight: bold;" onmouseleave="hide_shortcut()">
+  	<!-- <p style="text-align: center; margin-bottom:-10px; margin-top: 2px; font-size: 20px"><u><b>快  捷  目  錄</b></u></p> -->
+    <div id="IM_content" style="margin: -10px 0px; padding: 1px;">
+    <ul style="padding-left: 20px;  list-style-type:none;" onclick="hide_shortcut()">
+      <li><a href="#summary">本期要聞</a></li>
+      <li><a href="#technology-index">一、科技訊息</a></li>
+        <ul style="list-style-type:initial;">
+          {{#each techCategories as |category|}}
+            {{#withItem ../technology key=category}}
+              {{#if this}}
+                <li><a href="#{{category}}-index">{{category}}</a></li>
+              {{/if}}
+            {{/withItem}}
+          {{/each}}
+        </ul>
+      <li><a href="#industry-index">二、產業與廠商動態</a></li>
+      <li><a href="#conference-index">三、北美研討會訊息</a></li>
+        <ul style="list-style-type:initial;">
+          {{#each conference as |conf category|}}
+          <li><a href="#{{category}}-index">{{category}}</a></li>
+          {{/each}}
+        </ul>
+    </ul>
+    </div>
+  </div>
+  
   <div class="summary">
-    <div>本期要聞如下：</div>
+    <a name="summary"></a>
+    <div style="margin:5px">本期要聞如下：</div>
     <ol>
       {{#each highlight}}
       <li><a href="#{{id}}">{{title}}</a></li>
@@ -127,14 +277,15 @@
   <hr/>
 
   <div class="toc">
+    <a name="menu"></a>
     <div class="toc-div">本期目錄</div>
     <div class="chapter">
-      <div class="chapter-div"><a href="#technology">一、科技訊息</a></div>
+      <div class="chapter-div"><a name="technology-index" href="#technology">一、科技訊息</a></div>
       {{#each techCategories as |category|}}
         {{#withItem ../technology key=category}}
           {{#if this}}
           <div class="category">
-            <div class="category-div"><a href="#{{category}}">{{category}}</a></div>
+            <div class="category-div"><a name="{{category}}-index" href="#{{category}}">{{category}}</a></div>
             <ol>
             {{#each this}}
               <li><a href="#{{id}}">{{title}}</a></li>
@@ -147,7 +298,7 @@
     </div>
 
     <div class="chapter">
-      <div class="chapter-div"><a href="#industry">二、產業與廠商動態</a></div>
+      <div class="chapter-div"><a name="industry-index" href="#industry">二、產業與廠商動態</a></div>
       <div class="div">
         <ol>
           {{#each industry}}
@@ -158,10 +309,10 @@
     </div>
 
     <div class="chapter">
-      <div class="chapter-div"><a href="#conference">三、北美研討會訊息</a></div>
+      <div class="chapter-div"><a name="conference-index" href="#conference">三、北美研討會訊息</a></div>
       {{#each conference as |conf category|}}
       <div class="category">
-        <div class="category-div"><a href="#{{category}}">{{category}}</a></div>
+        <div class="category-div"><a name="{{category}}-index" href="#{{category}}">{{category}}</a></div>
         <ol>
           {{#each conf}}
           <li><a href="#{{id}}">{{title}}</a></li>
@@ -186,34 +337,32 @@
             <a name="{{category}}"></a>
             <div class="category-div">{{category}}</div>
             <ol>
-            {{#each this}}
-              <li>
-                <div class="article">
-                  <div>
-                    <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a>
-                  </div>
-                  {{#if image1}}
-                    <div class="figure">
-                      <img src="{{image1}}"/>
-                      <div class="figcaption">{{caption1}}</div>
+              {{#each this}}
+                <li>
+                  <div class="article">
+                    <div>
+                      <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a>
                     </div>
-                  {{/if}}
-                  <p>
-                    {{summary}} <span class="source">-- {{source}}, {{date}}</span>
-                  </p>
-                </div>
-              </li>
-            {{/each}}
+                    {{#if image1}}
+                      <div class="figure">
+                        <img src="{{image1}}"/>
+                        <div class="figcaption">{{caption1}}</div>
+                      </div>
+                    {{/if}}
+                    <p>
+                      {{summary}} <span class="source">-- {{source}}, {{date}}</span>
+                    </p>
+                  </div>
+                </li>
+              {{/each}}
             </ol>
-            <a class="go-to-top" href="#top">
-              Go to Top
-            </a>
           </div>
           {{/if}}
         {{/withItem}}
       {{/each}}
     </div>
-    <div class="contents-chapter">
+
+    <div class="chapter">
       <a name="industry"></a>
       <div class="chapter-div">二、產業與廠商動態</div>
       <ol>
@@ -236,13 +385,13 @@
         </li>
       {{/each}}
       </ol>
-      <a class="go-to-top" href="#top">
-        Go to Top
-      </a>
+      
     </div>
+
     <div class="chapter">
       <a name="conference"></a>
       <div class="chapter-div">三、北美研討會訊息</div>
+
       {{#each conference as |conf category|}}
       <div class="div">
         <a name="{{category}}"></a>
@@ -258,12 +407,32 @@
           </li>
           {{/each}}
         </ol>
-        <a class="go-to-top" href="#top">
-          Go to Top
-        </a>
+
+        
+        
       </div>
       {{/each}}
+
     </div>
   </main>
+
+  <script>
+    //display indexMenu
+    function show_shortcut(){
+    	var content = document.getElementById("indexMenu");
+  		if (content.style.display == "none" || content.style.display == "") {
+        content.style.display = "block";
+      }
+      else {
+        content.style.display = "none";
+      }
+    }
+
+    function hide_shortcut() {
+    	var content = document.getElementById("indexMenu");
+    	content.style.display= "none";
+    }
+  </script>
+
 </body>
 </html>
