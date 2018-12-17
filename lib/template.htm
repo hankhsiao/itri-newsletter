@@ -145,16 +145,20 @@
       width: 100px;
     }
 
+    .pixel {
+      visibility: hidden;
+    }
+
     tr.table-item-row:nth-child(even) {background-color: #eee}
     tr.table-item-row:nth-child(odd) {background-color: #fff}
   </style>
 </head>
 <body>
   <section class="main">
-    <img class="pixel" src="{{general.pixel}}"/>
     <h1 class="title">
       {{general.title}}<br/>
       {{general.subtitle}}
+      <img class="pixel" src="{{general.pixel}}"/>
     </h1>
     <h5 class="subtitle">
       {{general.vol}}<br/>
