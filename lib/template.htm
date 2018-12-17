@@ -47,6 +47,23 @@
       margin: 10px 0;
     }
 
+    .figure {
+      float: right;
+      width: 100%;
+    }
+
+    .figure img {
+      width: 100%;
+    }
+
+    .figcaption {
+      color: #666;
+      font-size: 12px;
+      line-height: 1.3;
+      margin: 5px 15px 15px 15px;
+      text-align: center;
+    }
+
     /* Smartphone */
     @media (max-width: 43.75em) {
       ul {
@@ -76,6 +93,12 @@
         font-size: 1.4em;
         font-weight: 600;
         line-height: 1.25em;
+      }
+
+      .figure {
+        float: right;
+        padding-left: 10px;
+        width: 45%;
       }
     }
 
@@ -108,7 +131,7 @@
     }
 
     .tags {
-      background-color: yellow;
+      background-color: lightblue;
       font-size: 12px;
       padding: 5px;
     }
@@ -134,9 +157,8 @@
     </h1>
     <h5 class="subtitle">
       {{general.vol}}<br/>
-      工研院北美公司    王韶華 敬啟<br/>
-      {{general.author}} 編輯<br/>
-      ({{general.date}})
+      工研院北美公司總經理　王韶華<br/>
+      編輯　{{general.author}}
     </h5>
 
     <hr />
@@ -146,6 +168,12 @@
       <h3 class="article-title">{{title}}</h3>
       <div><span class="tags">{{category}}<span></div>
       <p class="article-body">
+        {{#if image1}}
+          <div class="figure">
+            <img src="{{image1}}"/>
+            <div class="figcaption">{{caption1}}</div>
+          </div>
+        {{/if}}
         {{summary}}
         <a href="{{url}}" target="_blank">More</a>
       </p>
@@ -214,7 +242,7 @@
         工研院北美公司
       </a><br/><br/>
       祝　平安如意！<br/><br/>
-      工研院北美公司　王韶華　敬啟<br/>
+      工研院北美公司　王韶華　敬啟
     </h5>
   </section>
 
