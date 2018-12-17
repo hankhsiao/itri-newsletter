@@ -1,426 +1,222 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127230976-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-127230976-1');
-  </script>
-
   <title>{{general.title}}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      text-align: center;
-      margin: 50px;
-      padding: 5px;
+    body {
+      border-top: 10px solid #000;
+      color: #444;
+      font-family: "微軟正黑體", "Microsoft JhengHei", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.375em;
+      margin: 0;
+      padding: 0;
     }
 
-    body {
-      font-family: "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", "微软雅黑", Tahoma, Verdana, Geneva, sans-serif;
-      margin: 24px auto;
-      width: 980px;
-      border-radius: 20px;
+    h1, h2, h3, h4, h5 {
+      color: #222;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      font-weight: 700;
+      line-height: 1.2em;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      font-weight: 700;
+      line-height: 1.15em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      font-weight: 600;
+      line-height: 1.14em;
+      margin: 20px 0 10px 0;
+    }
+
+    h5 {
+      color: #333;
+      font-weight: 400;
     }
 
     p {
-      line-height: 1.4;
+      margin: 10px 0;
     }
 
-    .title {
-      font-size: 32px;
-      font-weight: bold;
-      text-align: center;
+    /* Smartphone */
+    @media (max-width: 43.75em) {
+      ul {
+        padding-left: 18px;
+      }
     }
 
-    .subtitle {
-      font-size: 20px;
-      font-style: italic;
-      font-weight: bold;
-      text-align: center;
+    /* Desktop */
+    @media (min-width: 56.25em) {
+      body {
+        line-height: 1.25em;
+      }
+
+      h1 {
+        font-size: 2.4em;
+        font-weight: 700;
+        line-height: 1.05em;
+      }
+
+      h2 {
+        font-size: 1.8em;
+        font-weight: 700;
+        line-height: 1.25em;
+      }
+
+      h3 {
+        font-size: 1.4em;
+        font-weight: 600;
+        line-height: 1.25em;
+      }
     }
 
-    .toc-div, .contents-div {
-      color: red;
-      font-size: 20px;
-      text-align: center;
+    hr {
+      border-width: 1px 0 0 0;
+      border-style: solid;
+      border-color: #ccc;
     }
 
-    .chapter-div {
-      color: red;
-      font-size: 24px;
-      font-weight: bold;
+    section.main {
+      padding: 0 16px;
+      max-width: 672px;
+      margin: 0 auto;
     }
 
-    .category-div, .div-div {
-      color: red;
-      font-size: 20px;
-      font-weight: bold;
-      margin: 20px;
+    th {
+      padding: 8px;
     }
 
-    .article{
-      text-align: left;
-    }
-
-    .figure {
-      display: inline-block;
-      float: right;
-      margin: 20px;
-      text-align: center;
-    }
-    .figure img, .figure .figcaption {
-      max-width: 500px;
-    }
-
-    .figure .figcaption {
-      color: gray;
-      font-size: 14px;
-      font-style: italic;
-      margin-top: 10px;
-      text-align: left;
-    }
-
-    .source {
-      color: gray;
-      font-size: 13px;
-      font-style: italic;
-    }
-
-    .go-to-top {
-      display: block;
-      margin: 16px 0;
+    th.table-category {
       font-size: 16px;
-      font-weight: bold;
-      text-align: right;
+      border-bottom: 1px solid #aaa;
+      padding-top: 16px;
     }
 
-    .greeting-section {
-      font-size: 20px;
-      margin: 40px 20px;
+    .content-list {
+      font-size: 1em;
+      font-weight: 100px;
+      line-height: 1.5;
     }
 
-    .greeting {
-      color: red;
-      font-size: 28px;
-      font-style: italic;
-      text-align: center;
+    .tags {
+      background-color: yellow;
+      font-size: 12px;
+      padding: 5px;
     }
 
-    .greeting-footer {
-      text-align: right;
-      font-size: 16px;
+    .conf-table {
+      font-size: 12px;
+      line-height: 1.25em;
     }
 
-    .pixel {
-      height: 0;
-      visibility: hidden;
-      width: 0;
+    .col-date {
+      width: 100px;
     }
 
-    #indexMenu {
-      display: none;
-      border-radius: 10px;
-      position: fixed;
-      height: auto; /*313px;*/
-      width: auto; /*195px;*/
-      right: 20px;
-      bottom: 70px;
-      border-style: none;
-      border-width: 1px;
-      background-color: lightgrey;
-      padding-left: 10px;
-      padding-right: 10px;
-      opacity: 1;
-
-    }
-    #indexMenu a {
-      color:blue;
-      text-decoration: none;
-    }
-
-    #indexMenu li:hover {
-      text-decoration: underline;
-      font-weight: 900;
-      background-color: #e5e500; /*yellow highlight*/
-    }
-
-    #IM_content li {
-      margin:3px;
-    }
-
-    #IM_content ul ul {
-      list-style-type:initial;
-      padding:0px;
-      list-style-position: inside;
-      margin-left: 20px;
-    }
-
-    #myBtn {
-      display: block;
-      position: fixed;
-      text-align: center;
-      width: auto;
-      height: auto;
-      bottom: 20px;
-      right: 20px;
-      z-index: 99;
-      border: none;
-      outline: none;
-      background-color: #42A5F5;  /*#0277BD;*/
-      color: white;
-      cursor: pointer;
-      padding: 15px;
-      border-radius: 4px;
-    }
-    #myBtn:hover {
-      background-color: #555;
-    }
-
-    @media screen and (max-width: 600px) {
-
-      #indexMenu {
-        font-size:70px;
-        margin-bottom: :10px;
-      }
-      #myBtn {
-        font-size:50px;
-      }
-    }
-
-    @media screen and (max-height: 600px) {
-
-      #indexMenu {
-        font-size:23px;
-        margin-bottom:0px;
-      }
-      #myBtn {
-        font-size:20px;
-      }
-    }
-
+    tr.table-item-row:nth-child(even) {background-color: #eee}
+    tr.table-item-row:nth-child(odd) {background-color: #fff}
   </style>
 </head>
 <body>
+  <section class="main">
+    <h1 class="title">
+      {{general.title}}<br/>
+      {{general.subtitle}}
+    </h1>
+    <h5 class="subtitle">
+      {{general.vol}}<br/>
+      工研院北美公司    王韶華 敬啟<br/>
+      {{general.author}} 編輯<br/>
+      ({{general.date}})
+    </h5>
 
-  <!-- button to go to top of page -->
-  <button onclick="show_shortcut()" id="myBtn" title="Go to" onClick="_gaq.push(['_trackEvent', 'indexMenu', 'click', 'shortcut', '0']);">Go To</button>
+    <hr />
 
-  <img class="pixel" src="{{general.pixel}}"/>
-  <a name="top"></a>
-  <h1 class="title">{{general.title}}</h1>
-  <h2 class="subtitle">{{general.subtitle}}</h2>
-
-  <div id = "indexMenu" style="font-weight: bold;" onmouseleave="hide_shortcut()">
-    <div id="IM_content" style="margin: -10px 0px; padding: 1px;">
-    <ul style="padding-left: 5px;  list-style-type:none;" onclick="hide_shortcut()">
-      <li><a href="#summary">本期要聞</a></li>
-      <li><a href="#technology-index">一、科技訊息</a></li>
-        <ul>
-          {{#each techCategories as |category|}}
-            {{#withItem ../technology key=category}}
-              {{#if this}}
-                <li><a href="#{{category}}-index">{{category}}</a></li>
-              {{/if}}
-            {{/withItem}}
-          {{/each}}
-        </ul>
-      <li><a href="#industry-index">二、產業與廠商動態</a></li>
-      <li><a href="#conference-index">三、北美研討會訊息</a></li>
-        <ul>
-          {{#each conference as |conf category|}}
-          <li><a href="#{{category}}-index">{{category}}</a></li>
-          {{/each}}
-        </ul>
-    </ul>
-    </div>
-  </div>
-
-  <div class="summary">
-    <a name="summary"></a>
-    <div style="margin:5px">本期要聞如下：</div>
-    <ol>
-      {{#each highlight}}
-      <li><a href="#{{id}}">{{title}}</a></li>
-      {{/each}}
-    </ol>
-    <div class="greeting-section">
-      <p>祝　您</p>
-      <p class="greeting">身體健康　萬事如意!!!</p>
-      <p class="greeting-footer">
-        工研院北美公司    王韶華 敬啟<br/>
-        {{general.author}} 編輯<br/>
-        ({{general.date}})
+    <h2 class="section-title">本期要聞</h2>
+    {{#each highlight}}
+      <h3 class="article-title">{{title}}</h3>
+      <div><span class="tags">{{category}}<span></div>
+      <p class="article-body">
+        {{summary}}
+        <a href="{{url}}" target="_blank">More</a>
       </p>
-    </div>
-  </div>
+    {{/each}}
 
-  <hr/>
-
-  <div class="toc">
-    <a name="menu"></a>
-    <div class="toc-div">本期目錄</div>
-    <div class="chapter">
-      <div class="chapter-div"><a name="technology-index" href="#technology">一、科技訊息</a></div>
-      {{#each techCategories as |category|}}
-        {{#withItem ../technology key=category}}
-          {{#if this}}
-          <div class="category">
-            <div class="category-div"><a name="{{category}}-index" href="#{{category}}" >{{category}}</a></div>
-            <ol>
+    <h2 class="section-title">科技訊息</h2>
+    {{#each techCategories as |category|}}
+      {{#withItem ../technology key=category}}
+        {{#if this}}
+          <h3 class="category-name">{{category}}</h3>
+          <ul class="content-list">
             {{#each this}}
-              <li><a href="#{{id}}" onClick="_gaq.push(['_trackEvent', 'TOC-tech', 'click', '{{title}}', '0']);">{{title}}</a></li>
+              <li>
+                <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a>
+                <span class="source">(<i>{{source}}</i>, {{formatDate date}})</span>
+              </li>
             {{/each}}
-            </ol>
-          </div>
-          {{/if}}
-        {{/withItem}}
-      {{/each}}
-    </div>
+          </ul>
+        {{/if}}
+      {{/withItem}}
+    {{/each}}
 
-    <div class="chapter">
-      <div class="chapter-div"><a name="industry-index" href="#industry">二、產業與廠商動態</a></div>
-      <div class="div">
-        <ol>
-          {{#each industry}}
-          <li><a href="#{{id}}" onClick="_gaq.push(['_trackEvent', 'TOC-industry', 'click', '{{title}}', '0']);">{{title}}</a></li>
-          {{/each}}
-        </ol>
-      </div>
-    </div>
+    <h2 class="section-title">產業與廠商動態</h2>
+    <ul class="content-list">
+    {{#each industry}}
+      <li>
+        <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a>
+        <span class="source">({{source}}, {{formatDate date}})</span>
+      </li>
+    {{/each}}
+    </ul>
 
-    <div class="chapter">
-      <div class="chapter-div"><a name="conference-index" href="#conference">三、北美研討會訊息</a></div>
+    <h2 class="section-title">北美研討會訊息</h2>
+    <table class="conf-table">
+      <colgroup>
+        <col class="col-title">
+        <col class="col-date">
+        <col class="col-location">
+      </colgroup>
       {{#each conference as |conf category|}}
-      <div class="category">
-        <div class="category-div"><a name="{{category}}-index" href="#{{category}}">{{category}}</a></div>
-        <ol>
-          {{#each conf}}
-          <li><a href="#{{id}}" onClick="_gaq.push(['_trackEvent', 'TOC-conf', 'click', '{{title}}', '0']);">{{title}}</a></li>
-          {{/each}}
-        </ol>
-      </div>
-      {{/each}}
-    </div>
-  </div>
-
-  <hr/>
-
-  <main class="contents">
-    <div class="contents-div">本期內容</div>
-    <div class="chapter">
-      <a name="technology"></a>
-      <div class="chapter-div">一、科技訊息</div>
-      {{#each techCategories as |category|}}
-        {{#withItem ../technology key=category}}
-          {{#if this}}
-          <div class="category">
-            <a name="{{category}}"></a>
-            <div class="category-div">{{category}}</div>
-            <ol>
-              {{#each this}}
-                <li>
-                  <div class="article">
-                    <div>
-                      <a name="{{id}}" href="{{url}}" target="_blank" onClick="_gaq.push(['_trackEvent', 'techCategories', 'click', '{{title}}', '0']);">{{title}}</a>
-                    </div>
-                    {{#if image1}}
-                      <div class="figure">
-                        <img src="{{image1}}"/>
-                        <div class="figcaption">{{caption1}}</div>
-                      </div>
-                    {{/if}}
-                    <p>
-                      {{summary}} <span class="source">-- {{source}}, {{date}}</span>
-                    </p>
-                  </div>
-                </li>
-              {{/each}}
-            </ol>
-          </div>
-          {{/if}}
-        {{/withItem}}
-      {{/each}}
-    </div>
-
-    <div class="chapter">
-      <a name="industry"></a>
-      <div class="chapter-div">二、產業與廠商動態</div>
-      <ol>
-      {{#each industry}}
-        <li>
-          <div class="article">
-            <div>
-              <a name="{{id}}" href="{{url}}" target="_blank" onClick="_gaq.push(['_trackEvent', 'industryCategories', 'click', '{{title}}', '0']);">{{title}}</a>
-            </div>
-            {{#if image1}}
-              <div class="figure">
-                <img src="{{image1}}"/>
-                <div class="figcaption">{{caption1}}</div>
-              </div>
-            {{/if}}
-            <p>
-              {{summary}} <span class="source">-- {{source}}, {{date}}</span>
-            </p>
-          </div>
-        </li>
-      {{/each}}
-      </ol>
-
-    </div>
-
-    <div class="chapter">
-      <a name="conference"></a>
-      <div class="chapter-div">三、北美研討會訊息</div>
-
-      {{#each conference as |conf category|}}
-      <div class="div">
-        <a name="{{category}}"></a>
-        <div class="div-div">{{category}}</div>
-        <ol>
-          {{#each conf}}
-          <li>
-            <p>
-              <a name="{{id}}" href="{{url}}" target="_blank" onClick="_gaq.push(['_trackEvent', 'ConfCategories', 'click', '{{title}}', '0']);">{{title}}</a><br/>
-              {{start_date}} ~ {{end_date}}<br/>
+        <tr>
+          <th class="table-category" colspan="3">{{category}}</th>
+        </tr>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Date</th>
+          <th scope="col">Location</th>
+        </tr>
+        {{#each conf}}
+        <tr class="table-item-row">
+          <td><a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a></td>
+          <td>{{formatDate2 start_date end_date}}</td>
+          <td>
+            <a href="https://maps.google.com/?q={{location}}" target="_blank">
               {{location}}
-            </p>
-          </li>
-          {{/each}}
-        </ol>
-
-
-
-      </div>
+            </a>
+          </td>
+        </tr>
+        {{/each}}
       {{/each}}
+    </table>
 
-    </div>
-  </main>
-
-  <script>
-    //display indexMenu
-    function show_shortcut(){
-    	var content = document.getElementById("indexMenu");
-  		if (content.style.display == "none" || content.style.display == "") {
-        content.style.display = "block";
-      }
-      else {
-        content.style.display = "none";
-      }
-    }
-
-    function hide_shortcut() {
-    	var content = document.getElementById("indexMenu");
-    	content.style.display= "none";
-    }
-  </script>
+    <h5>
+      This service is provided to you by ITRI International Inc..<br/>
+      Visit the Web site at <a href="https://www.itri.org.tw/chi/Content/Messagess/contents.aspx?SiteID=1&MmmID=620605466164371634" target="_blank">
+        工研院北美公司
+      </a><br/><br/>
+      祝　平安如意！<br/><br/>
+      工研院北美公司　王韶華　敬啟<br/>
+    </h5>
+  </section>
 
 </body>
 </html>
