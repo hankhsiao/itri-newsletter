@@ -150,6 +150,10 @@
       width: 1px;
     }
 
+    .source {
+      margin-left: 5px;
+    }
+
     tr.table-item-row:nth-child(even) {background-color: #eee}
     tr.table-item-row:nth-child(odd) {background-color: #fff}
   </style>
@@ -190,27 +194,27 @@
       {{#withItem ../technology key=category}}
         {{#if this}}
           <h3 class="category-name">{{category}}</h3>
-          <ul class="content-list">
+          <ol class="content-list">
             {{#each this}}
               <li>
-                <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a>
-                <span class="source">(<i>{{source}}</i>, {{formatDate date}})</span>
+                <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a><!--
+                --><span class="source">(<i>{{source}}</i>, {{formatDate date}})</span>
               </li>
             {{/each}}
-          </ul>
+          </ol>
         {{/if}}
       {{/withItem}}
     {{/each}}
 
     <h2 class="section-title">產業與廠商動態</h2>
-    <ul class="content-list">
+    <ol class="content-list">
     {{#each industry}}
       <li>
-        <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a>
-        <span class="source">({{source}}, {{formatDate date}})</span>
+        <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a><!--
+        --><span class="source">(<i>{{source}}</i>, {{formatDate date}})</span>
       </li>
     {{/each}}
-    </ul>
+    </ol>
 
     <h2 class="section-title">北美研討會訊息</h2>
     <table class="conf-table">
