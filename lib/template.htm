@@ -132,7 +132,9 @@
 
     .tags {
       background-color: lightblue;
+      border-radius: 4px;
       font-size: 12px;
+      margin-right: 1px;
       padding: 5px;
     }
 
@@ -154,12 +156,20 @@
       margin-left: 5px;
     }
 
+    .warning {
+      color: red;
+    }
+
     tr.table-item-row:nth-child(even) {background-color: #eee}
     tr.table-item-row:nth-child(odd) {background-color: #fff}
   </style>
 </head>
 <body>
   <section class="main">
+    {{#unless isRelease}}
+      <h1 class="warning">DO NOT E-MAIL THIS VERSION</h1>
+    {{/unless}}
+
     <h1 class="title">
       {{general.title}}<br/>
       {{general.subtitle}}
@@ -176,7 +186,14 @@
     <h2 class="section-title">本期要聞</h2>
     {{#each highlight}}
       <h3 class="article-title">{{title}}</h3>
-      <div><span class="tags">{{category}}<span></div>
+      <div>
+        {{#category}}
+          <span class="tags">{{this}}</span>
+        {{/category}}
+        {{#each tags}}
+          <span class="tags">{{this}}</span>
+        {{/each}}
+      </div>
       <p class="article-body">
         {{#if image1}}
           <div class="figure">
@@ -198,7 +215,10 @@
             {{#each this}}
               <li>
                 <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a><!--
-                --><span class="source">(<i>{{source}}</i>, {{formatDate date}})</span>
+                --><span class="source">(<i>{{source}}</i>, {{formatDate date}})</span><!--
+                {{#each tags}}
+                  --><span class="tags">{{this}}</span><!--
+                {{/each}}-->
               </li>
             {{/each}}
           </ol>
@@ -211,7 +231,10 @@
     {{#each industry}}
       <li>
         <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a><!--
-        --><span class="source">(<i>{{source}}</i>, {{formatDate date}})</span>
+        --><span class="source">(<i>{{source}}</i>, {{formatDate date}})</span><!--
+        {{#each tags}}
+          --><span class="tags">{{this}}</span><!--
+        {{/each}}-->
       </li>
     {{/each}}
     </ol>
