@@ -143,8 +143,8 @@
       line-height: 1.25em;
     }
 
-    .col-date {
-      width: 120px;
+    .date {
+      margin-top: 4px;
     }
 
     .pixel {
@@ -250,7 +250,7 @@
           <th class="table-category" colspan="2">{{category}}</th>
         </tr>
         <tr>
-          <th scope="col">Title</th>
+          <th scope="col">Title / Date</th>
           <th scope="col">Location</th>
         </tr>
         {{#withItem ../conference key=category}}
@@ -261,8 +261,8 @@
                   <a name="{{id}}" href="{{url}}" target="_blank">
                     {{title}}
                   </a>
-                  <br/>
-                  {{formatDate2 start_date end_date}}
+                  <br />
+                  <span class="date">{{formatDate2 start_date end_date}}</span>
                 </td>
                 <td>
                   <a href="https://maps.google.com/?q={{location}}" target="_blank">
