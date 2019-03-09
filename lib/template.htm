@@ -134,7 +134,7 @@
       background-color: lightblue;
       border-radius: 4px;
       font-size: 12px;
-      margin-right: 1px;
+      margin-left: 1px;
       padding: 5px;
     }
 
@@ -144,7 +144,7 @@
     }
 
     .col-date {
-      width: 100px;
+      width: 120px;
     }
 
     .pixel {
@@ -243,35 +243,42 @@
     <table class="conf-table">
       <colgroup>
         <col class="col-title">
-        <col class="col-date">
         <col class="col-location">
       </colgroup>
-      {{#each conference as |conf category|}}
+      {{#each confCategories as |category|}}
         <tr>
-          <th class="table-category" colspan="3">{{category}}</th>
+          <th class="table-category" colspan="2">{{category}}</th>
         </tr>
         <tr>
           <th scope="col">Title</th>
-          <th scope="col">Date</th>
           <th scope="col">Location</th>
         </tr>
-        {{#each conf}}
-        <tr class="table-item-row">
-          <td><a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a></td>
-          <td>{{formatDate2 start_date end_date}}</td>
-          <td>
-            <a href="https://maps.google.com/?q={{location}}" target="_blank">
-              {{location}}
-            </a>
-          </td>
-        </tr>
-        {{/each}}
+        {{#withItem ../conference key=category}}
+          {{#if this}}
+            {{#each this}}
+              <tr class="table-item-row">
+                <td>
+                  <a name="{{id}}" href="{{url}}" target="_blank">
+                    {{title}}
+                  </a>
+                  <br/>
+                  {{formatDate2 start_date end_date}}
+                </td>
+                <td>
+                  <a href="https://maps.google.com/?q={{location}}" target="_blank">
+                    {{location}}
+                  </a>
+                </td>
+              </tr>
+            {{/each}}
+          {{/if}}
+        {{/withItem}}
       {{/each}}
     </table>
 
     <h5>
       This service is provided to you by ITRI International Inc..<br/>
-      Visit the Web site at <a href="https://www.itri.org.tw/chi/Content/Messagess/contents.aspx?SiteID=1&MmmID=620605466164371634" target="_blank">
+      Visit the Web site at <a href="http://www.itri.com" target="_blank">
         工研院北美公司
       </a><br/><br/>
       祝　平安如意！<br/><br/>
