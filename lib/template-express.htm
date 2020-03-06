@@ -119,28 +119,9 @@
     }
 
     th.table-category {
-      background-color: #ddecf5;
       font-size: 16px;
-    }
-
-    .content-of-table {
-      width: 100%;
-    }
-
-    .content-of-table.A\.智慧生活 th {
-      background-color: #ddecf5;
-    }
-
-    .content-of-table.B\.健康樂活 th {
-      background-color: #f6d4b9;
-    }
-
-    .content-of-table.C\.永續環境 th {
-      background-color: #dae1c1;
-    }
-
-    .content-of-table.T\.共通基礎技術 th {
-      background-color: #cdd0ef;
+      border-bottom: 1px solid #aaa;
+      padding-top: 16px;
     }
 
     .content-list {
@@ -149,11 +130,7 @@
       line-height: 1.5;
     }
 
-    .content {
-      position: relative;
-    }
-
-    .tag {
+    .tags {
       background-color: lightblue;
       border-radius: 4px;
       font-size: 12px;
@@ -161,40 +138,9 @@
       padding: 5px;
     }
 
-    .tag-ancher {
-      position: absolute;
-      top: -30px;
-      left: 0;
-    }
-
-    .tag.A1\.個人化裝置與服務,
-    .tag.A2\.自主移動系統,
-    .tag.A3\.智慧產業及服務 {
-      background-color: #ddecf5;
-    }
-
-    .tag.B1\.智慧醫療,
-    .tag.B2\.健康照護 {
-      background-color: #f6d4b9;
-    }
-
-    .tag.C1\.循環經濟,
-    .tag.C2\.智慧製造,
-    .tag.C3\.綠能系統與環境科技 {
-      background-color: #dae1c1;
-    }
-
-    .tag.T1\.人工智慧技術,
-    .tag.T2\.半導體晶片技術,
-    .tag.T3\.通訊技術,
-    .tag.T4\.資安與雲端技術 {
-      background-color: #cdd0ef;
-    }
-
     .conf-table {
       font-size: 12px;
       line-height: 1.25em;
-      width: 100%;
     }
 
     .date {
@@ -235,49 +181,43 @@
       編輯　{{general.author}}
     </h5>
 
-    <table class="content-of-table A.智慧生活">
-      <tr><th><a href="#A.智慧生活">A.智慧生活</a></th></tr>
-      <tr><td><a href="#A1.個人化裝置與服務">A1.個人化裝置與服務</a></td></tr>
-      <tr><td><a href="#A2.自主移動系統">A2.自主移動系統</a></td></tr>
-      <tr><td><a href="#A3.智慧產業及服務">A3.智慧產業及服務</a></td></tr>
-    </table>
+    <hr />
 
-    <table class="content-of-table B.健康樂活">
-      <tr><th><a href="#B.健康樂活">B.健康樂活</a></th></tr>
-      <tr><td><a href="#B1.智慧醫療">B1.智慧醫療</a></td></tr>
-      <tr><td><a href="#B2.健康照護">B2.健康照護</a></td></tr>
-    </table>
-
-    <table class="content-of-table C.永續環境">
-      <tr><th><a href="#C.永續環境">C.永續環境</a></th></tr>
-      <tr><td><a href="#C1.循環經濟">C1.循環經濟</a></td></tr>
-      <tr><td><a href="#C2.智慧製造">C2.智慧製造</a></td></tr>
-      <tr><td><a href="#C3.綠能系統與環境科技">C3.綠能系統與環境科技</a></td></tr>
-    </table>
-
-    <table class="content-of-table T.共通基礎技術">
-      <tr><th><a href="#T.共通基礎技術">T.共通基礎技術</a></th></tr>
-      <tr><td><a href="#T1.人工智慧技術">T1.人工智慧技術</a></td></tr>
-      <tr><td><a href="#T2.半導體晶片技術">T2.半導體晶片技術</a></td></tr>
-      <tr><td><a href="#T3.通訊技術">T3.通訊技術</a></td></tr>
-      <tr><td><a href="#T4.資安與雲端技術">T4.資安與雲端技術</a></td></tr>
-    </table>
-
-    <hr/>
+    <h2 class="section-title">本期要聞</h2>
+    {{#each highlight}}
+      <h3 class="article-title">{{title}}</h3>
+      <div>
+        {{#category}}
+          <span class="tags">{{this}}</span>
+        {{/category}}
+        {{#each tags}}
+          <span class="tags">{{this}}</span>
+        {{/each}}
+      </div>
+      <p class="article-body">
+        {{#if image1}}
+          <div class="figure">
+            <img src="{{image1}}"/>
+            <div class="figcaption">{{caption1}}</div>
+          </div>
+        {{/if}}
+        {{summary}}
+        <a href="{{url}}" target="_blank">More</a>
+      </p>
+    {{/each}}
 
     <h2 class="section-title">科技訊息</h2>
     {{#each techCategories as |category|}}
       {{#withItem ../technology key=category}}
         {{#if this}}
-          <h3 class="category-name"><a id="{{category}}"/>{{category}}</h3>
+          <h3 class="category-name">{{category}}</h3>
           <ol class="content-list">
             {{#each this}}
-              <li class="content">
+              <li>
                 <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a><!--
                 --><span class="source">(<i>{{source}}</i>, {{formatDate date}})</span><!--
                 {{#each tags}}
-              --><a id="{{this}}" class="tag-ancher"></a><!--
-              --><span class="tag {{this}}">{{this}}</span><!--
+                  --><span class="tags">{{this}}</span><!--
                 {{/each}}-->
               </li>
             {{/each}}
@@ -285,6 +225,19 @@
         {{/if}}
       {{/withItem}}
     {{/each}}
+
+    <h2 class="section-title">產業與廠商動態</h2>
+    <ol class="content-list">
+    {{#each industry}}
+      <li>
+        <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a><!--
+        --><span class="source">(<i>{{source}}</i>, {{formatDate date}})</span><!--
+        {{#each tags}}
+          --><span class="tags">{{this}}</span><!--
+        {{/each}}-->
+      </li>
+    {{/each}}
+    </ol>
 
     <h2 class="section-title">北美研討會訊息</h2>
     <table class="conf-table">
@@ -320,14 +273,8 @@
             {{/each}}
           {{/if}}
         {{/withItem}}
-        <tr>
-          <td scope="col">&nbsp;</td>
-          <td scope="col">&nbsp;</td>
-        </tr>
       {{/each}}
     </table>
-
-    <hr/>
 
     <h5>
       This service is provided to you by ITRI International Inc..<br/>
