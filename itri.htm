@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ITRI - North America Technology Newsletter</title>
+  <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
@@ -123,25 +123,27 @@
       font-size: 16px;
     }
 
-    .content-of-table {
-      width: 100%;
+    .content-of-table .header {
+      font-weight: 500;
+      text-align: center;
     }
 
-    .content-of-table.A\.智慧生活 th {
-      background-color: #ddecf5;
+    .content-of-table .item {
+      padding: 8px;
     }
 
-    .content-of-table.B\.健康樂活 th {
-      background-color: #f6d4b9;
-    }
-
-    .content-of-table.C\.永續環境 th {
-      background-color: #dae1c1;
-    }
-
-    .content-of-table.T\.共通基礎技術 th {
-      background-color: #cdd0ef;
-    }
+      .content-of-table.A .header {
+        background-color: #ddecf5;
+      }
+      .content-of-table.B .header {
+        background-color: #f6d4b9;
+      }
+      .content-of-table.C .header {
+        background-color: #dae1c1;
+      }
+      .content-of-table.T .header {
+        background-color: #cdd0ef;
+      }
 
     .content-list {
       font-size: 1em;
@@ -161,35 +163,24 @@
       padding: 5px;
     }
 
-    .tag-ancher {
+    .tag-anchor {
       position: absolute;
       top: -30px;
       left: 0;
     }
 
-    .tag.A1\.個人化裝置與服務,
-    .tag.A2\.自主移動系統,
-    .tag.A3\.智慧產業及服務 {
-      background-color: #ddecf5;
-    }
-
-    .tag.B1\.智慧醫療,
-    .tag.B2\.健康照護 {
-      background-color: #f6d4b9;
-    }
-
-    .tag.C1\.循環經濟,
-    .tag.C2\.智慧製造,
-    .tag.C3\.綠能系統與環境科技 {
-      background-color: #dae1c1;
-    }
-
-    .tag.T1\.人工智慧技術,
-    .tag.T2\.半導體晶片技術,
-    .tag.T3\.通訊技術,
-    .tag.T4\.資安與雲端技術 {
-      background-color: #cdd0ef;
-    }
+      .tag.A {
+        background-color: #ddecf5;
+      }
+      .tag.B {
+        background-color: #f6d4b9;
+      }
+      .tag.C {
+        background-color: #dae1c1;
+      }
+      .tag.T {
+        background-color: #cdd0ef;
+      }
 
     .conf-table {
       font-size: 12px;
@@ -222,604 +213,584 @@
   <section class="main">
       <h1 class="warning">DO NOT E-MAIL THIS VERSION</h1>
 
-    <h1 class="title">
-      ITRI - North America Technology Newsletter<br/>
-      [北美科技快訊]
-      <img class="pixel" src=""/>
-    </h1>
-    <h5 class="subtitle">
-      第 50 期 for the month of Feb 2020<br/>
-      工研院北美公司總經理　王韶華<br/>
-      編輯　蘇美玲
-    </h5>
+      <h5 class="subtitle">
+        北美科技快訊 第 50 期 for the month of Feb 2020<br/>
+        工研院北美公司總經理　王韶華<br/>
+        編輯　蘇美玲
+      </h5>
 
-    <table class="content-of-table A.智慧生活">
-      <tr><th><a href="#A.智慧生活">A.智慧生活</a></th></tr>
-      <tr><td><a href="#A1.個人化裝置與服務">A1.個人化裝置與服務</a></td></tr>
-      <tr><td><a href="#A2.自主移動系統">A2.自主移動系統</a></td></tr>
-      <tr><td><a href="#A3.智慧產業及服務">A3.智慧產業及服務</a></td></tr>
-    </table>
-
-    <table class="content-of-table B.健康樂活">
-      <tr><th><a href="#B.健康樂活">B.健康樂活</a></th></tr>
-      <tr><td><a href="#B1.智慧醫療">B1.智慧醫療</a></td></tr>
-      <tr><td><a href="#B2.健康照護">B2.健康照護</a></td></tr>
-    </table>
-
-    <table class="content-of-table C.永續環境">
-      <tr><th><a href="#C.永續環境">C.永續環境</a></th></tr>
-      <tr><td><a href="#C1.循環經濟">C1.循環經濟</a></td></tr>
-      <tr><td><a href="#C2.智慧製造">C2.智慧製造</a></td></tr>
-      <tr><td><a href="#C3.綠能系統與環境科技">C3.綠能系統與環境科技</a></td></tr>
-    </table>
-
-    <table class="content-of-table T.共通基礎技術">
-      <tr><th><a href="#T.共通基礎技術">T.共通基礎技術</a></th></tr>
-      <tr><td><a href="#T1.人工智慧技術">T1.人工智慧技術</a></td></tr>
-      <tr><td><a href="#T2.半導體晶片技術">T2.半導體晶片技術</a></td></tr>
-      <tr><td><a href="#T3.通訊技術">T3.通訊技術</a></td></tr>
-      <tr><td><a href="#T4.資安與雲端技術">T4.資安與雲端技術</a></td></tr>
-    </table>
+      <div class="content-of-table A">
+        <div class="header item"><a href="#A.智慧生活">A.智慧生活</a></div>
+        <div class="item"><a href="#A1.個人化裝置與服務">A1.個人化裝置與服務</a></div>        <div class="item"><a href="#A2.自主移動系統">A2.自主移動系統</a></div>        <div class="item"><a href="#A3.智慧產業及服務">A3.智慧產業及服務</a></div></div>
+      <div class="content-of-table B">
+        <div class="header item"><a href="#B.健康樂活">B.健康樂活</a></div>
+        <div class="item"><a href="#B1.智慧醫療">B1.智慧醫療</a></div>        <div class="item"><a href="#B2.健康照護">B2.健康照護</a></div></div>
+      <div class="content-of-table C">
+        <div class="header item"><a href="#C.永續環境">C.永續環境</a></div>
+        <div class="item"><a href="#C1.循環經濟">C1.循環經濟</a></div>        <div class="item"><a href="#C2.智慧製造">C2.智慧製造</a></div>        <div class="item"><a href="#C3.綠能系統與環境科技">C3.綠能系統與環境科技</a></div></div>
+      <div class="content-of-table T">
+        <div class="header item"><a href="#T.共通基礎技術">T.共通基礎技術</a></div>
+        <div class="item"><a href="#T1.人工智慧技術">T1.人工智慧技術</a></div>        <div class="item"><a href="#T2.半導體晶片技術">T2.半導體晶片技術</a></div>        <div class="item"><a href="#T3.通訊技術">T3.通訊技術</a></div>        <div class="item"><a href="#T4.資安與雲端技術">T4.資安與雲端技術</a></div></div>
 
     <hr/>
 
     <h2 class="section-title">科技訊息</h2>
-          <h3 class="category-name"><a id="A.智慧生活"/>A.智慧生活</h3>
+          <h3 class="category-name"><a id="A.智慧生活" name="A.智慧生活"/>A.智慧生活</h3>
           <ol class="content-list">
               <li class="content">
-                <a name="J5btwC2PrC" href="https://ai.googleblog.com/2020/02/open-images-v6-now-featuring-localized.html" target="_blank">Open Images V6 — Now Featuring Localized Narratives</a><!--
-                --><span class="source">(<i>Google AI Blog</i>, Feb 26, 2020)</span><!--
-              --><a id="A1.個人化裝置與服務" class="tag-ancher"></a><!--
-              --><span class="tag A1.個人化裝置與服務">A1.個人化裝置與服務</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="nOh0g1w-0d" href="https://syncedreview.com/2020/02/26/retrieving-reasoning-paths-for-answering-complex-questions/" target="_blank">Retrieving Reasoning Paths for Answering Complex Questions</a><!--
-                --><span class="source">(<i>Synced</i>, Feb 26, 2020)</span><!--
-              --><a id="A1.個人化裝置與服務" class="tag-ancher"></a><!--
-              --><span class="tag A1.個人化裝置與服務">A1.個人化裝置與服務</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="OgcYM0RhoA" href="http://news.mit.edu/2020/smart-diaper-rfid-notify-caregiver-0214" target="_blank">Low-cost “smart” diaper can notify caregiver when it’s wet</a><!--
-                --><span class="source">(<i>MIT News</i>, Feb 13, 2020)</span><!--
-              --><a id="A1.個人化裝置與服務" class="tag-ancher"></a><!--
-              --><span class="tag A1.個人化裝置與服務">A1.個人化裝置與服務</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="uKTLU8q4kb" href="https://spectrum.ieee.org/view-from-the-valley/consumer-electronics/portable-devices/heres-how-facebooks-braincomputer-interface-development-is-progressing" target="_blank">Here&#x27;s How Facebook&#x27;s Brain-Computer Interface Development is Progressing</a><!--
-                --><span class="source">(<i>IEEE Spectrum</i>, Feb 25, 2020)</span><!--
-              --><a id="A1.個人化裝置與服務" class="tag-ancher"></a><!--
-              --><span class="tag A1.個人化裝置與服務">A1.個人化裝置與服務</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="qixKyyoayh" href="https://news.ncsu.edu/2020/02/wristwatch-monitors-body-chemistry/" target="_blank">‘Wristwatch’ Monitors Body Chemistry to Boost Athletic Performance, Prevent Injury</a><!--
-                --><span class="source">(<i>NC State University</i>, Feb 3, 2020)</span><!--
-              --><a id="A1.個人化裝置與服務" class="tag-ancher"></a><!--
-              --><span class="tag A1.個人化裝置與服務">A1.個人化裝置與服務</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="BQSerO94M" href="https://engineering.columbia.edu/press-releases/ciocarlie-tactile-robot-finger" target="_blank">A Tactile Robot Finger With No Blind Spots</a><!--
-                --><span class="source">(<i>Culimbia Engineering News</i>, Feb 26, 2020)</span><!--
-              --><a id="A1.個人化裝置與服務" class="tag-ancher"></a><!--
-              --><span class="tag A1.個人化裝置與服務">A1.個人化裝置與服務</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="2RM7ITr94_" href="https://venturebeat.com/2020/02/12/googles-cleargrasp-ai-model-helps-robots-better-recognize-transparent-objects/" target="_blank">Google’s ClearGrasp AI model helps robots better recognize transparent objects</a><!--
-                --><span class="source">(<i>VentureBeat</i>, Feb 12, 2020)</span><!--
-              --><a id="A1.個人化裝置與服務" class="tag-ancher"></a><!--
-              --><span class="tag A1.個人化裝置與服務">A1.個人化裝置與服務</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="lTPDchYXCg" href="https://syncedreview.com/2020/02/28/robot-lovers-rejoice-fei-fei-li-stanford-team-crowd-sources-worlds-largest-robot-manipulation-dataset/" target="_blank">Robot Lovers Rejoice! Fei-Fei Li Stanford Team Crowd-Sources World’s Largest Robot Manipulation Dataset</a><!--
+                <a id="1t2m_arIDz8" name="1t2m_arIDz8" href="https://syncedreview.com/2020/02/28/robot-lovers-rejoice-fei-fei-li-stanford-team-crowd-sources-worlds-largest-robot-manipulation-dataset/" target="_blank">Robot Lovers Rejoice! Fei-Fei Li Stanford Team Crowd-Sources World’s Largest Robot Manipulation Dataset</a><!--
                 --><span class="source">(<i>Synced</i>, Feb 28, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="YeNxcP5xbU" href="https://syncedreview.com/2020/02/06/radioactive-data-facebook-ai-knows-where-you-got-your-training-dataset/" target="_blank">Radioactive Data: Facebook AI Knows Where You Got Your Training Dataset</a><!--
+                <a id="n0SCDVHRWLu" name="n0SCDVHRWLu" href="https://syncedreview.com/2020/02/06/radioactive-data-facebook-ai-knows-where-you-got-your-training-dataset/" target="_blank">Radioactive Data: Facebook AI Knows Where You Got Your Training Dataset</a><!--
                 --><span class="source">(<i>Synced</i>, Feb 6, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="MdlEPEBTdV" href="https://syncedreview.com/2020/02/13/google-brain-cmu-semi-supervised-noisy-student-achieves-88-4-top-1-accuracy-on-imagenet/" target="_blank">Google Brain &amp; CMU Semi-Supervised ‘Noisy Student’ Achieves 88.4% Top-1 Accuracy on ImageNet</a><!--
+                <a id="uxz8c2OyDN3" name="uxz8c2OyDN3" href="https://syncedreview.com/2020/02/13/google-brain-cmu-semi-supervised-noisy-student-achieves-88-4-top-1-accuracy-on-imagenet/" target="_blank">Google Brain &amp; CMU Semi-Supervised ‘Noisy Student’ Achieves 88.4% Top-1 Accuracy on ImageNet</a><!--
                 --><span class="source">(<i>Synced</i>, Feb 13, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="Ml0js2sy_Y" href="http://news.mit.edu/2020/machine-learning-picks-out-hidden-vibrations-earthquake-data-0228" target="_blank">Machine learning picks out hidden vibrations from earthquake data</a><!--
+                <a id="vblnXFrrDMc" name="vblnXFrrDMc" href="https://ai.googleblog.com/2020/02/open-images-v6-now-featuring-localized.html" target="_blank">Open Images V6 — Now Featuring Localized Narratives</a><!--
+                --><span class="source">(<i>Google AI Blog</i>, Feb 26, 2020)</span><!--
+              --><a id="A1.個人化裝置與服務" name="A1.個人化裝置與服務" class="tag-anchor"></a><!--
+              --><span class="tag A">A1.個人化裝置與服務</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="MvqoPGhN_xO" name="MvqoPGhN_xO" href="https://syncedreview.com/2020/02/26/retrieving-reasoning-paths-for-answering-complex-questions/" target="_blank">Retrieving Reasoning Paths for Answering Complex Questions</a><!--
+                --><span class="source">(<i>Synced</i>, Feb 26, 2020)</span><!--
+              --><a id="A1.個人化裝置與服務" name="A1.個人化裝置與服務" class="tag-anchor"></a><!--
+              --><span class="tag A">A1.個人化裝置與服務</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="AlfvlfacJpr" name="AlfvlfacJpr" href="http://news.mit.edu/2020/machine-learning-picks-out-hidden-vibrations-earthquake-data-0228" target="_blank">Machine learning picks out hidden vibrations from earthquake data</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 28, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="uhuKdkCcEB" href="http://news.mit.edu/2020/sensorized-skin-soft-robots-0213" target="_blank">“Sensorized” skin helps soft robots find their bearings</a><!--
+                <a id="yfKYkAJ4odY" name="yfKYkAJ4odY" href="http://news.mit.edu/2020/sensorized-skin-soft-robots-0213" target="_blank">“Sensorized” skin helps soft robots find their bearings</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 13, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="FvvYJLzyIr" href="https://techxplore.com/news/2020-02-ground-penetrating-bad-weather.html" target="_blank">A ground penetrating support for self driving navigation in bad weather</a><!--
-                --><span class="source">(<i>TechXplore</i>, Feb 22, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="f8BkPcokZ4" href="https://techxplore.com/news/2020-02-road-self-driving-car-high-speed-mode.html" target="_blank">How a road sign trick sent a self-driving car into high-speed mode</a><!--
-                --><span class="source">(<i>TechXplore</i>, Feb 21, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="C54ewrSm_P" href="https://techxplore.com/news/2020-02-microelectronics-embedded-jellyfish-propulsion.html" target="_blank">Microelectronics embedded in live jellyfish enhance propulsion</a><!--
-                --><span class="source">(<i>TechXplore</i>, Feb 14, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="ct1D4YZX" href="https://www.mccormick.northwestern.edu/news/articles/2020/02/swarming-robots-avoid-collisions-traffic-jams.html" target="_blank">Swarming Robots Avoid Collisions, Traffic Jams</a><!--
-                --><span class="source">(<i>Northwestern University Engineering News</i>, Feb 24, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="TCo0q9p2R" href="https://www.grasp.upenn.edu/news/modboat-low-cost-aquatic-robot-single-motor" target="_blank">Modboat: A low-cost aquatic robot with a single motor</a><!--
-                --><span class="source">(<i>Penn Engineering GRASP Lab</i>, Feb 25, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="Sv6I6Z8wBH" href="https://techxplore.com/news/2020-02-las-vegas-excavation-tunnel-vision.html" target="_blank">Las Vegas excavation gives new meaning to Tunnel Vision</a><!--
-                --><span class="source">(<i>TechXplore</i>, Feb 21, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="3QcZUeNo6N" href="https://www.cnet.com/news/watch-a-boston-dynamics-robot-dog-pull-a-rickshaw/" target="_blank">Watch a Boston Dynamics robot dog pull a rickshaw</a><!--
-                --><span class="source">(<i>CNet</i>, Feb 17, 2020)</span><!--
-              --><a id="A2.自主移動系統" class="tag-ancher"></a><!--
-              --><span class="tag A2.自主移動系統">A2.自主移動系統</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="ckz5wqzIT1" href="http://news.mit.edu/2020/automated-rewrite-wikipedia-articles-0212" target="_blank">Automated system can rewrite outdated sentences in Wikipedia articles</a><!--
+                <a id="F5EGh0S3eda" name="F5EGh0S3eda" href="http://news.mit.edu/2020/automated-rewrite-wikipedia-articles-0212" target="_blank">Automated system can rewrite outdated sentences in Wikipedia articles</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 12, 2020)</span><!--
-              --><a id="A3.智慧產業及服務" class="tag-ancher"></a><!--
-              --><span class="tag A3.智慧產業及服務">A3.智慧產業及服務</span><!--
+              --><a id="A3.智慧產業及服務" name="A3.智慧產業及服務" class="tag-anchor"></a><!--
+              --><span class="tag A">A3.智慧產業及服務</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="cyb6hk8qHQ" href="https://techxplore.com/news/2020-02-cooling.html" target="_blank">Heating and cooling that anticipates your needs</a><!--
+                <a id="Bk3CAz3t69e" name="Bk3CAz3t69e" href="http://news.mit.edu/2020/smart-diaper-rfid-notify-caregiver-0214" target="_blank">Low-cost “smart” diaper can notify caregiver when it’s wet</a><!--
+                --><span class="source">(<i>MIT News</i>, Feb 13, 2020)</span><!--
+              --><a id="A1.個人化裝置與服務" name="A1.個人化裝置與服務" class="tag-anchor"></a><!--
+              --><span class="tag A">A1.個人化裝置與服務</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="R2k--E1VE_F" name="R2k--E1VE_F" href="https://spectrum.ieee.org/view-from-the-valley/consumer-electronics/portable-devices/heres-how-facebooks-braincomputer-interface-development-is-progressing" target="_blank">Here&#x27;s How Facebook&#x27;s Brain-Computer Interface Development is Progressing</a><!--
+                --><span class="source">(<i>IEEE Spectrum</i>, Feb 25, 2020)</span><!--
+              --><a id="A1.個人化裝置與服務" name="A1.個人化裝置與服務" class="tag-anchor"></a><!--
+              --><span class="tag A">A1.個人化裝置與服務</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="D--nF_wPYMY" name="D--nF_wPYMY" href="https://techxplore.com/news/2020-02-cooling.html" target="_blank">Heating and cooling that anticipates your needs</a><!--
                 --><span class="source">(<i>TechXplore</i>, Feb 25, 2020)</span><!--
-              --><a id="A3.智慧產業及服務" class="tag-ancher"></a><!--
-              --><span class="tag A3.智慧產業及服務">A3.智慧產業及服務</span><!--
+              --><a id="A3.智慧產業及服務" name="A3.智慧產業及服務" class="tag-anchor"></a><!--
+              --><span class="tag A">A3.智慧產業及服務</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="iLn9o3K3MJf" name="iLn9o3K3MJf" href="https://news.ncsu.edu/2020/02/wristwatch-monitors-body-chemistry/" target="_blank">‘Wristwatch’ Monitors Body Chemistry to Boost Athletic Performance, Prevent Injury</a><!--
+                --><span class="source">(<i>NC State University</i>, Feb 3, 2020)</span><!--
+              --><a id="A1.個人化裝置與服務" name="A1.個人化裝置與服務" class="tag-anchor"></a><!--
+              --><span class="tag A">A1.個人化裝置與服務</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="-_5xepyfmoa" name="-_5xepyfmoa" href="https://techxplore.com/news/2020-02-ground-penetrating-bad-weather.html" target="_blank">A ground penetrating support for self driving navigation in bad weather</a><!--
+                --><span class="source">(<i>TechXplore</i>, Feb 22, 2020)</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="muv2ESpCLwu" name="muv2ESpCLwu" href="https://techxplore.com/news/2020-02-road-self-driving-car-high-speed-mode.html" target="_blank">How a road sign trick sent a self-driving car into high-speed mode</a><!--
+                --><span class="source">(<i>TechXplore</i>, Feb 21, 2020)</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="F396bnMDf2p" name="F396bnMDf2p" href="https://techxplore.com/news/2020-02-microelectronics-embedded-jellyfish-propulsion.html" target="_blank">Microelectronics embedded in live jellyfish enhance propulsion</a><!--
+                --><span class="source">(<i>TechXplore</i>, Feb 14, 2020)</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="MRdTCyrj-dg" name="MRdTCyrj-dg" href="https://www.mccormick.northwestern.edu/news/articles/2020/02/swarming-robots-avoid-collisions-traffic-jams.html" target="_blank">Swarming Robots Avoid Collisions, Traffic Jams</a><!--
+                --><span class="source">(<i>Northwestern University Engineering News</i>, Feb 24, 2020)</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="TMBODxIWdqw" name="TMBODxIWdqw" href="https://www.grasp.upenn.edu/news/modboat-low-cost-aquatic-robot-single-motor" target="_blank">Modboat: A low-cost aquatic robot with a single motor</a><!--
+                --><span class="source">(<i>Penn Engineering GRASP Lab</i>, Feb 25, 2020)</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="vTjHXd-7k2y" name="vTjHXd-7k2y" href="https://engineering.columbia.edu/press-releases/ciocarlie-tactile-robot-finger" target="_blank">A Tactile Robot Finger With No Blind Spots</a><!--
+                --><span class="source">(<i>Culimbia Engineering News</i>, Feb 26, 2020)</span><!--
+              --><a id="A1.個人化裝置與服務" name="A1.個人化裝置與服務" class="tag-anchor"></a><!--
+              --><span class="tag A">A1.個人化裝置與服務</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="uMp3WiPgHMr" name="uMp3WiPgHMr" href="https://venturebeat.com/2020/02/12/googles-cleargrasp-ai-model-helps-robots-better-recognize-transparent-objects/" target="_blank">Google’s ClearGrasp AI model helps robots better recognize transparent objects</a><!--
+                --><span class="source">(<i>VentureBeat</i>, Feb 12, 2020)</span><!--
+              --><a id="A1.個人化裝置與服務" name="A1.個人化裝置與服務" class="tag-anchor"></a><!--
+              --><span class="tag A">A1.個人化裝置與服務</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="2_ZArPWbIK7" name="2_ZArPWbIK7" href="https://techxplore.com/news/2020-02-las-vegas-excavation-tunnel-vision.html" target="_blank">Las Vegas excavation gives new meaning to Tunnel Vision</a><!--
+                --><span class="source">(<i>TechXplore</i>, Feb 21, 2020)</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="fhmzLr8R1Ov" name="fhmzLr8R1Ov" href="https://www.cnet.com/news/watch-a-boston-dynamics-robot-dog-pull-a-rickshaw/" target="_blank">Watch a Boston Dynamics robot dog pull a rickshaw</a><!--
+                --><span class="source">(<i>CNet</i>, Feb 17, 2020)</span><!--
+              --><a id="A2.自主移動系統" name="A2.自主移動系統" class="tag-anchor"></a><!--
+              --><span class="tag A">A2.自主移動系統</span><!--
                 -->
               </li>
           </ol>
-          <h3 class="category-name"><a id="B.健康樂活"/>B.健康樂活</h3>
+          <h3 class="category-name"><a id="B.健康樂活" name="B.健康樂活"/>B.健康樂活</h3>
           <ol class="content-list">
               <li class="content">
-                <a name="rq8vyU_74s" href="http://news.mit.edu/2020/artificial-intelligence-identifies-new-antibiotic-0220" target="_blank">Artificial intelligence yields new antibiotic</a><!--
+                <a id="4FQsfspD_Ht" name="4FQsfspD_Ht" href="http://news.mit.edu/2020/artificial-intelligence-identifies-new-antibiotic-0220" target="_blank">Artificial intelligence yields new antibiotic</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 20, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
+              --><a id="B1.test123" name="B1.test123" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.test123</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="P8L1PgPw1b" href="http://news.mit.edu/2020/structure-influenza-b-protein-unveil-0203" target="_blank">Chemists unveil the structure of an influenza B protein</a><!--
+                <a id="X1hpFLioQ70" name="X1hpFLioQ70" href="http://news.mit.edu/2020/structure-influenza-b-protein-unveil-0203" target="_blank">Chemists unveil the structure of an influenza B protein</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 3, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="JalWnS2BNH" href="https://spectrum.ieee.org/the-institute/ieee-member-news/mark-humayun-builds-bionic-eyes" target="_blank">Mark Humayun Builds Bionic Eyes</a><!--
+                <a id="9xr-ctiqnOp" name="9xr-ctiqnOp" href="https://spectrum.ieee.org/the-institute/ieee-member-news/mark-humayun-builds-bionic-eyes" target="_blank">Mark Humayun Builds Bionic Eyes</a><!--
                 --><span class="source">(<i>IEEE Spectrum</i>, Feb 28, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="U_yvR-1QdW" href="https://www.rutgers.edu/news/new-robot-does-superior-job-sampling-blood" target="_blank">New Robot Does Superior Job Sampling Blood</a><!--
-                --><span class="source">(<i>Rutgers Today</i>, Feb 7, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="l5J4eBYtK" href="https://techxplore.com/news/2020-02-miniaturized-warehouse-robots-biotechnology-applications.html" target="_blank">Engineers develop miniaturized &#x27;warehouse robots&#x27; for biotechnology applications</a><!--
-                --><span class="source">(<i>TechXplore</i>, Feb 27, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="M9K631p5j" href="https://news.rice.edu/2020/02/19/magnet-controlled-bioelectronic-implant-could-relieve-pain/" target="_blank">Magnet-controlled bioelectronic implant could relieve pain</a><!--
-                --><span class="source">(<i>Rice University News</i>, Feb 19, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="jU3WWs16q" href="https://techxplore.com/news/2020-02-highly-sensitive-pressure-sensors-robotics.html" target="_blank">Highly sensitive pressure sensors for robotics and healthcare applications</a><!--
-                --><span class="source">(<i>TechXplore</i>, Feb 20, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="5WfWiVrwU" href="https://www.cmu.edu/news/stories/archives/2020/february/genome-structure-as-social-network.html" target="_blank">Exploring a Genome&#x27;s 3D Organization Through a Social Network Lens</a><!--
-                --><span class="source">(<i>CMU News</i>, Feb 21, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="3UWeBjlir" href="https://medicaldialogues.in/neurology-neurosurgery/news/surgeons-successfully-treat-brain-aneurysms-by-robotic-technology-63437" target="_blank">Surgeons Successfully Treat Brain Aneurysms By Robotic Technology</a><!--
-                --><span class="source">(<i>Medical Dialogues</i>, Feb 26, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="mOP3MKTXt" href="https://www.sciencedaily.com/releases/2020/02/200225075107.htm" target="_blank">Noninvasive, self-adhesive sensor predicted worsening heart failure in veterans</a><!--
-                --><span class="source">(<i>Science Daily</i>, Feb 25, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="WmDVnCFIN" href="https://www.purdue.edu/newsroom/releases/2020/Q1/stretchable,-wearable-coils-may-make-mri,-other-medical-tests-easier-on-patients.html" target="_blank">Stretchable, wearable coils may make MRI, other medical tests easier on patients</a><!--
-                --><span class="source">(<i>Purdue University News</i>, Feb 26, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="bucr1BJqNG" href="https://www.sciencedaily.com/releases/2020/02/200226130517.htm" target="_blank">Artificial intelligence can scan doctors&#x27; notes to distinguish between types of back pain</a><!--
-                --><span class="source">(<i>Science Daily</i>, Feb 28, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="lNLEjxwLqG" href="https://www.sciencedaily.com/releases/2020/02/200226110829.htm" target="_blank">Scientists Discover New Clue Behind Age-Related Diseases and Food Spoilage</a><!--
-                --><span class="source">(<i>Science Daily</i>, Feb 26, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="UiTSuMIDnG" href="https://www.ucf.edu/news/ucf-researchers-develop-device-that-mimics-brain-cells-used-for-human-vision/" target="_blank">UCF Researchers Develop Device That Mimics Brain Cells Used for Human Vision</a><!--
-                --><span class="source">(<i>UCF Today</i>, Feb 14, 2020)</span><!--
-              --><a id="B1.智慧醫療" class="tag-ancher"></a><!--
-              --><span class="tag B1.智慧醫療">B1.智慧醫療</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="qOF3zsnibB" href="https://spectrum.ieee.org/the-human-os/biomedical/devices/prototype-wearable-monitor-sleep-apnea-news" target="_blank">Wearable Patch Uses Machine Learning to Detect Sleep Apnea</a><!--
+                <a id="bdD0Nm3Han7" name="bdD0Nm3Han7" href="https://spectrum.ieee.org/the-human-os/biomedical/devices/prototype-wearable-monitor-sleep-apnea-news" target="_blank">Wearable Patch Uses Machine Learning to Detect Sleep Apnea</a><!--
                 --><span class="source">(<i>IEEE Spectrum</i>, Feb 7, 2020)</span><!--
-              --><a id="B2.健康照護" class="tag-ancher"></a><!--
-              --><span class="tag B2.健康照護">B2.健康照護</span><!--
+              --><a id="B2.健康照護" name="B2.健康照護" class="tag-anchor"></a><!--
+              --><span class="tag B">B2.健康照護</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="-5Ou_Ls5t" href="https://www.sciencedaily.com/releases/2020/02/200220141731.htm" target="_blank">Let there be &#x27;circadian&#x27; light</a><!--
+                <a id="x0NwELgoB9b" name="x0NwELgoB9b" href="https://www.rutgers.edu/news/new-robot-does-superior-job-sampling-blood" target="_blank">New Robot Does Superior Job Sampling Blood</a><!--
+                --><span class="source">(<i>Rutgers Today</i>, Feb 7, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="Hm8-bKBUBRf" name="Hm8-bKBUBRf" href="https://techxplore.com/news/2020-02-miniaturized-warehouse-robots-biotechnology-applications.html" target="_blank">Engineers develop miniaturized &#x27;warehouse robots&#x27; for biotechnology applications</a><!--
+                --><span class="source">(<i>TechXplore</i>, Feb 27, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="v9ZCWAwZwwa" name="v9ZCWAwZwwa" href="https://news.rice.edu/2020/02/19/magnet-controlled-bioelectronic-implant-could-relieve-pain/" target="_blank">Magnet-controlled bioelectronic implant could relieve pain</a><!--
+                --><span class="source">(<i>Rice University News</i>, Feb 19, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="UuD-E9YqwdZ" name="UuD-E9YqwdZ" href="https://techxplore.com/news/2020-02-highly-sensitive-pressure-sensors-robotics.html" target="_blank">Highly sensitive pressure sensors for robotics and healthcare applications</a><!--
+                --><span class="source">(<i>TechXplore</i>, Feb 20, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="swpjnDLaHSB" name="swpjnDLaHSB" href="https://www.sciencedaily.com/releases/2020/02/200220141731.htm" target="_blank">Let there be &#x27;circadian&#x27; light</a><!--
                 --><span class="source">(<i>Science Daily</i>, Feb 20, 2020)</span><!--
-              --><a id="B2.健康照護" class="tag-ancher"></a><!--
-              --><span class="tag B2.健康照護">B2.健康照護</span><!--
+              --><a id="B2.健康照護" name="B2.健康照護" class="tag-anchor"></a><!--
+              --><span class="tag B">B2.健康照護</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="ZWeIsCamvf" href="https://www.patentlyapple.com/patently-apple/2020/02/apple-reveals-more-about-their-future-modular-wall-unit-system-that-automatically-configures-smart-homes.html" target="_blank">Apple Reveals more about their future Modular Wall Unit System that Automatically Configures Smart Homes</a><!--
+                <a id="JUAitSItUN7" name="JUAitSItUN7" href="https://www.cmu.edu/news/stories/archives/2020/february/genome-structure-as-social-network.html" target="_blank">Exploring a Genome&#x27;s 3D Organization Through a Social Network Lens</a><!--
+                --><span class="source">(<i>CMU News</i>, Feb 21, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="YpCQwhUSGe8" name="YpCQwhUSGe8" href="https://medicaldialogues.in/neurology-neurosurgery/news/surgeons-successfully-treat-brain-aneurysms-by-robotic-technology-63437" target="_blank">Surgeons Successfully Treat Brain Aneurysms By Robotic Technology</a><!--
+                --><span class="source">(<i>Medical Dialogues</i>, Feb 26, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="D9CYfL3sQgx" name="D9CYfL3sQgx" href="https://www.sciencedaily.com/releases/2020/02/200225075107.htm" target="_blank">Noninvasive, self-adhesive sensor predicted worsening heart failure in veterans</a><!--
+                --><span class="source">(<i>Science Daily</i>, Feb 25, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="ITr8YrfqaKD" name="ITr8YrfqaKD" href="https://www.purdue.edu/newsroom/releases/2020/Q1/stretchable,-wearable-coils-may-make-mri,-other-medical-tests-easier-on-patients.html" target="_blank">Stretchable, wearable coils may make MRI, other medical tests easier on patients</a><!--
+                --><span class="source">(<i>Purdue University News</i>, Feb 26, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="4D_i_No-FxP" name="4D_i_No-FxP" href="https://www.sciencedaily.com/releases/2020/02/200226130517.htm" target="_blank">Artificial intelligence can scan doctors&#x27; notes to distinguish between types of back pain</a><!--
+                --><span class="source">(<i>Science Daily</i>, Feb 28, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="gPjV6BVxMlR" name="gPjV6BVxMlR" href="https://www.sciencedaily.com/releases/2020/02/200226110829.htm" target="_blank">Scientists Discover New Clue Behind Age-Related Diseases and Food Spoilage</a><!--
+                --><span class="source">(<i>Science Daily</i>, Feb 26, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="xaU0Qs69JiH" name="xaU0Qs69JiH" href="https://www.ucf.edu/news/ucf-researchers-develop-device-that-mimics-brain-cells-used-for-human-vision/" target="_blank">UCF Researchers Develop Device That Mimics Brain Cells Used for Human Vision</a><!--
+                --><span class="source">(<i>UCF Today</i>, Feb 14, 2020)</span><!--
+              --><a id="B1.智慧醫療" name="B1.智慧醫療" class="tag-anchor"></a><!--
+              --><span class="tag B">B1.智慧醫療</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="4Xdj1QWjl7B" name="4Xdj1QWjl7B" href="https://www.patentlyapple.com/patently-apple/2020/02/apple-reveals-more-about-their-future-modular-wall-unit-system-that-automatically-configures-smart-homes.html" target="_blank">Apple Reveals more about their future Modular Wall Unit System that Automatically Configures Smart Homes</a><!--
                 --><span class="source">(<i>Patently Apple</i>, Feb 13, 2020)</span><!--
-              --><a id="B2.健康照護" class="tag-ancher"></a><!--
-              --><span class="tag B2.健康照護">B2.健康照護</span><!--
+              --><a id="B2.健康照護" name="B2.健康照護" class="tag-anchor"></a><!--
+              --><span class="tag B">B2.健康照護</span><!--
                 -->
               </li>
           </ol>
-          <h3 class="category-name"><a id="C.永續環境"/>C.永續環境</h3>
+          <h3 class="category-name"><a id="C.永續環境" name="C.永續環境"/>C.永續環境</h3>
           <ol class="content-list">
               <li class="content">
-                <a name="Jz-Ej5Bvt_" href="http://news.mit.edu/2020/materials-insulating-properties-can-be-tuned-at-will-0224" target="_blank">A material’s insulating properties can be tuned at will</a><!--
+                <a id="H_LZ5TuCFnW" name="H_LZ5TuCFnW" href="http://news.mit.edu/2020/materials-insulating-properties-can-be-tuned-at-will-0224" target="_blank">A material’s insulating properties can be tuned at will</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 24, 2020)</span><!--
-              --><a id="C1.循環經濟" class="tag-ancher"></a><!--
-              --><span class="tag C1.循環經濟">C1.循環經濟</span><!--
+              --><a id="C1.循環經濟" name="C1.循環經濟" class="tag-anchor"></a><!--
+              --><span class="tag C">C1.循環經濟</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="63ToCSRg7X" href="http://news.mit.edu/2020/passive-solar-powered-water-desalination-0207" target="_blank">Simple, solar-powered water desalination</a><!--
-                --><span class="source">(<i>MIT News</i>, Feb 7, 2020)</span><!--
-              --><a id="C1.循環經濟" class="tag-ancher"></a><!--
-              --><span class="tag C1.循環經濟">C1.循環經濟</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="8NUPSXYW_5" href="http://news.mit.edu/2020/roadmap-scaling-perovskites-solar-0206" target="_blank">Researchers develop a roadmap for growth of new solar cells</a><!--
-                --><span class="source">(<i>MIT News</i>, Feb 6, 2020)</span><!--
-              --><a id="C1.循環經濟" class="tag-ancher"></a><!--
-              --><span class="tag C1.循環經濟">C1.循環經濟</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="9JlapotLs2" href="https://spectrum.ieee.org/energywise/energy/fossil-fuels/carbon-capture-power-plant-co2-concrete" target="_blank">Capture Carbon in Concrete Made With CO2</a><!--
-                --><span class="source">(<i>IEEE Spectrum</i>, Feb 7, 2020)</span><!--
-              --><a id="C1.循環經濟" class="tag-ancher"></a><!--
-              --><span class="tag C1.循環經濟">C1.循環經濟</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="q8IlF3-tl3" href="https://www.ornl.gov/news/polymers-get-caught-love-hate-chemistry-oil-and-water" target="_blank">Polymers get caught up in love-hate chemistry of oil and water</a><!--
-                --><span class="source">(<i>ORNL News</i>, Feb 27, 2020)</span><!--
-              --><a id="C1.循環經濟" class="tag-ancher"></a><!--
-              --><span class="tag C1.循環經濟">C1.循環經濟</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="Bt9n7B9oEr" href="http://news.rice.edu/2020/02/12/graphene-forms-under-microscopes-eye-2/" target="_blank">Graphene forms under microscope’s eye</a><!--
-                --><span class="source">(<i>Rice University News</i>, Feb 12, 2020)</span><!--
-              --><a id="C1.循環經濟" class="tag-ancher"></a><!--
-              --><span class="tag C1.循環經濟">C1.循環經濟</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="p4RRrCvG7_" href="https://news.northeastern.edu/2020/02/18/this-nanomaterial-could-be-our-best-tool-to-make-renewable-energy-cheaper/" target="_blank">This could be our best tool to make renewable energy cheaper</a><!--
-                --><span class="source">(<i>Northeastern University News</i>, Feb 18, 2020)</span><!--
-              --><a id="C1.循環經濟" class="tag-ancher"></a><!--
-              --><span class="tag C1.循環經濟">C1.循環經濟</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="EfNHib005X" href="https://phys.org/news/2020-02-method-isolate-atomic-sheets-materials.html" target="_blank">Researchers develop new method to isolate atomic sheets and create new materials</a><!--
-                --><span class="source">(<i>PHY.ORG</i>, Feb 20, 2020)</span><!--
-              --><a id="C1.循環經濟" class="tag-ancher"></a><!--
-              --><span class="tag C1.循環經濟">C1.循環經濟</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="IlnEkF2qAL" href="http://news.mit.edu/2020/instrument-may-enable-mail-testing-detect-heavy-metals-water-0225" target="_blank">Instrument may enable mail-in testing to detect heavy metals in water</a><!--
+                <a id="u4Tvz2H0o-X" name="u4Tvz2H0o-X" href="http://news.mit.edu/2020/instrument-may-enable-mail-testing-detect-heavy-metals-water-0225" target="_blank">Instrument may enable mail-in testing to detect heavy metals in water</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 25, 2020)</span><!--
-              --><a id="C2.智慧製造" class="tag-ancher"></a><!--
-              --><span class="tag C2.智慧製造">C2.智慧製造</span><!--
+              --><a id="C2.智慧製造" name="C2.智慧製造" class="tag-anchor"></a><!--
+              --><span class="tag C">C2.智慧製造</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="XQPz3AyMDf" href="http://news.mit.edu/2020/bubble-capturing-surface-foam-0212" target="_blank">Bubble-capturing surface helps get rid of foam</a><!--
-                --><span class="source">(<i>MIT News</i>, Feb 12, 2020)</span><!--
-              --><a id="C2.智慧製造" class="tag-ancher"></a><!--
-              --><span class="tag C2.智慧製造">C2.智慧製造</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="HdaIvAlFAw" href="https://spectrum.ieee.org/tech-talk/artificial-intelligence/machine-learning/3d-print-jobs-news-accurate-machine-learning" target="_blank">3D Print Jobs Are More Accurate With Machine Learning</a><!--
-                --><span class="source">(<i>IEEE Spectrum</i>, Feb 19, 2020)</span><!--
-              --><a id="C2.智慧製造" class="tag-ancher"></a><!--
-              --><span class="tag C2.智慧製造">C2.智慧製造</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="0AuskeGXAT" href="https://www.mccormick.northwestern.edu/news/articles/2020/02/atomic-dance-reveals-new-insights-into-performance-of-2d-materials.html" target="_blank">‘Atomic Dance’ Reveals New Insights into Performance of 2D Materials</a><!--
-                --><span class="source">(<i>Northwestern University Engineering News</i>, Feb 11, 2020)</span><!--
-              --><a id="C2.智慧製造" class="tag-ancher"></a><!--
-              --><span class="tag C2.智慧製造">C2.智慧製造</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="nRRI7C7tba" href="https://3dprintingindustry.com/news/from-residual-mcdonalds-cooking-oil-to-3d-printing-resin-168264/" target="_blank">From residual McDonald&#x27;s cooking oil to 3D printing resin</a><!--
-                --><span class="source">(<i>3DPrinting Industry</i>, Feb 7, 2020)</span><!--
-              --><a id="C2.智慧製造" class="tag-ancher"></a><!--
-              --><span class="tag C2.智慧製造">C2.智慧製造</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="gOVy6x95lP" href="http://news.mit.edu/2020/solid-batteries-lithium-metal-electrode-0203" target="_blank">New electrode design may lead to more powerful batteries</a><!--
+                <a id="P7hlzQ7D-Vh" name="P7hlzQ7D-Vh" href="http://news.mit.edu/2020/solid-batteries-lithium-metal-electrode-0203" target="_blank">New electrode design may lead to more powerful batteries</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 3, 2020)</span><!--
-              --><a id="C3.綠能系統與環境科技" class="tag-ancher"></a><!--
-              --><span class="tag C3.綠能系統與環境科技">C3.綠能系統與環境科技</span><!--
+              --><a id="C3.綠能系統與環境科技" name="C3.綠能系統與環境科技" class="tag-anchor"></a><!--
+              --><span class="tag C">C3.綠能系統與環境科技</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="VM0jBxgUpu" href="https://www.sciencedaily.com/releases/2020/02/200227144313.htm" target="_blank">Data centers use less energy than you think</a><!--
+                <a id="a7_dSDugI_I" name="a7_dSDugI_I" href="http://news.mit.edu/2020/passive-solar-powered-water-desalination-0207" target="_blank">Simple, solar-powered water desalination</a><!--
+                --><span class="source">(<i>MIT News</i>, Feb 7, 2020)</span><!--
+              --><a id="C1.循環經濟" name="C1.循環經濟" class="tag-anchor"></a><!--
+              --><span class="tag C">C1.循環經濟</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="02gtTxzO8kN" name="02gtTxzO8kN" href="http://news.mit.edu/2020/roadmap-scaling-perovskites-solar-0206" target="_blank">Researchers develop a roadmap for growth of new solar cells</a><!--
+                --><span class="source">(<i>MIT News</i>, Feb 6, 2020)</span><!--
+              --><a id="C1.循環經濟" name="C1.循環經濟" class="tag-anchor"></a><!--
+              --><span class="tag C">C1.循環經濟</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="mNLR3p67erz" name="mNLR3p67erz" href="http://news.mit.edu/2020/bubble-capturing-surface-foam-0212" target="_blank">Bubble-capturing surface helps get rid of foam</a><!--
+                --><span class="source">(<i>MIT News</i>, Feb 12, 2020)</span><!--
+              --><a id="C2.智慧製造" name="C2.智慧製造" class="tag-anchor"></a><!--
+              --><span class="tag C">C2.智慧製造</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="9Yq-JXzEA6c" name="9Yq-JXzEA6c" href="https://spectrum.ieee.org/energywise/energy/fossil-fuels/carbon-capture-power-plant-co2-concrete" target="_blank">Capture Carbon in Concrete Made With CO2</a><!--
+                --><span class="source">(<i>IEEE Spectrum</i>, Feb 7, 2020)</span><!--
+              --><a id="C1.循環經濟" name="C1.循環經濟" class="tag-anchor"></a><!--
+              --><span class="tag C">C1.循環經濟</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="jlXVixcJh_d" name="jlXVixcJh_d" href="https://spectrum.ieee.org/tech-talk/artificial-intelligence/machine-learning/3d-print-jobs-news-accurate-machine-learning" target="_blank">3D Print Jobs Are More Accurate With Machine Learning</a><!--
+                --><span class="source">(<i>IEEE Spectrum</i>, Feb 19, 2020)</span><!--
+              --><a id="C2.智慧製造" name="C2.智慧製造" class="tag-anchor"></a><!--
+              --><span class="tag C">C2.智慧製造</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="31_hr2axdVg" name="31_hr2axdVg" href="https://www.sciencedaily.com/releases/2020/02/200227144313.htm" target="_blank">Data centers use less energy than you think</a><!--
                 --><span class="source">(<i>Science Daily</i>, Feb 27, 2020)</span><!--
-              --><a id="C3.綠能系統與環境科技" class="tag-ancher"></a><!--
-              --><span class="tag C3.綠能系統與環境科技">C3.綠能系統與環境科技</span><!--
+              --><a id="C3.綠能系統與環境科技" name="C3.綠能系統與環境科技" class="tag-anchor"></a><!--
+              --><span class="tag C">C3.綠能系統與環境科技</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="5VwJ8tK0mQ" href="https://news.cornell.edu/stories/2020/02/quadrupling-turbines-us-can-meet-2030-wind-energy-goals" target="_blank">Quadrupling turbines, U.S. can meet 2030 wind-energy goals</a><!--
+                <a id="DRISkHCjhn9" name="DRISkHCjhn9" href="https://news.cornell.edu/stories/2020/02/quadrupling-turbines-us-can-meet-2030-wind-energy-goals" target="_blank">Quadrupling turbines, U.S. can meet 2030 wind-energy goals</a><!--
                 --><span class="source">(<i>Cornell Chronicle</i>, Feb 21, 2020)</span><!--
-              --><a id="C3.綠能系統與環境科技" class="tag-ancher"></a><!--
-              --><span class="tag C3.綠能系統與環境科技">C3.綠能系統與環境科技</span><!--
+              --><a id="C3.綠能系統與環境科技" name="C3.綠能系統與環境科技" class="tag-anchor"></a><!--
+              --><span class="tag C">C3.綠能系統與環境科技</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="ENKIxOaFTm" href="https://techxplore.com/news/2020-02-high-nickel-layered-oxide-cathodes-lithium-ion.html" target="_blank">Enhancing high-nickel layered oxide cathodes for lithium-ion batteries</a><!--
+                <a id="hhacEehAlnc" name="hhacEehAlnc" href="https://techxplore.com/news/2020-02-high-nickel-layered-oxide-cathodes-lithium-ion.html" target="_blank">Enhancing high-nickel layered oxide cathodes for lithium-ion batteries</a><!--
                 --><span class="source">(<i>TechXplore</i>, Feb 3, 2020)</span><!--
-              --><a id="C3.綠能系統與環境科技" class="tag-ancher"></a><!--
-              --><span class="tag C3.綠能系統與環境科技">C3.綠能系統與環境科技</span><!--
+              --><a id="C3.綠能系統與環境科技" name="C3.綠能系統與環境科技" class="tag-anchor"></a><!--
+              --><span class="tag C">C3.綠能系統與環境科技</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="cVcff62HjM" href="https://news.wsu.edu/2020/02/18/researchers-show-advance-next-generation-lithium-metal-batteries/" target="_blank">Researchers show advance in next-generation lithium metal batteries</a><!--
+                <a id="VVofCpd8Pam" name="VVofCpd8Pam" href="https://news.wsu.edu/2020/02/18/researchers-show-advance-next-generation-lithium-metal-batteries/" target="_blank">Researchers show advance in next-generation lithium metal batteries</a><!--
                 --><span class="source">(<i>WSU State University News</i>, Feb 18, 2020)</span><!--
-              --><a id="C3.綠能系統與環境科技" class="tag-ancher"></a><!--
-              --><span class="tag C3.綠能系統與環境科技">C3.綠能系統與環境科技</span><!--
+              --><a id="C3.綠能系統與環境科技" name="C3.綠能系統與環境科技" class="tag-anchor"></a><!--
+              --><span class="tag C">C3.綠能系統與環境科技</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="tp1d-MCtOh" href="https://energy.stanford.edu/news/new-machine-learning-method-stanford-could-supercharge-battery-development-electric-vehicles" target="_blank">New machine learning method could supercharge battery development for EVs</a><!--
+                <a id="0Xn3T_hSuuu" name="0Xn3T_hSuuu" href="https://energy.stanford.edu/news/new-machine-learning-method-stanford-could-supercharge-battery-development-electric-vehicles" target="_blank">New machine learning method could supercharge battery development for EVs</a><!--
                 --><span class="source">(<i>Stanford Energy News</i>, Feb 19, 2020)</span><!--
-              --><a id="C3.綠能系統與環境科技" class="tag-ancher"></a><!--
-              --><span class="tag C3.綠能系統與環境科技">C3.綠能系統與環境科技</span><!--
+              --><a id="C3.綠能系統與環境科技" name="C3.綠能系統與環境科技" class="tag-anchor"></a><!--
+              --><span class="tag C">C3.綠能系統與環境科技</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="2ZUCU1PZNQ" href="https://newsroom.niu.edu/2020/02/19/scientists-develop-safer-lead-based-perovskite-solar-cell/" target="_blank">Scientists develop safer lead-based perovskite solar cell</a><!--
+                <a id="7KL5tbQhpzY" name="7KL5tbQhpzY" href="https://newsroom.niu.edu/2020/02/19/scientists-develop-safer-lead-based-perovskite-solar-cell/" target="_blank">Scientists develop safer lead-based perovskite solar cell</a><!--
                 --><span class="source">(<i>NIU Newsroom</i>, Feb 19, 2020)</span><!--
-              --><a id="C3.綠能系統與環境科技" class="tag-ancher"></a><!--
-              --><span class="tag C3.綠能系統與環境科技">C3.綠能系統與環境科技</span><!--
+              --><a id="C3.綠能系統與環境科技" name="C3.綠能系統與環境科技" class="tag-anchor"></a><!--
+              --><span class="tag C">C3.綠能系統與環境科技</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="px5zSV_AN2" href="https://spectrum.ieee.org/energywise/energy/batteries-storage/ion-storage-systems-ceramic-electrolyte-news-solid-state-batteries" target="_blank">Ion Storage Systems Says Its Ceramic Electrolyte Could Be a Gamechanger for Solid-State Batteries</a><!--
+                <a id="fExKfQxd1Wm" name="fExKfQxd1Wm" href="https://www.ornl.gov/news/polymers-get-caught-love-hate-chemistry-oil-and-water" target="_blank">Polymers get caught up in love-hate chemistry of oil and water</a><!--
+                --><span class="source">(<i>ORNL News</i>, Feb 27, 2020)</span><!--
+              --><a id="C1.循環經濟" name="C1.循環經濟" class="tag-anchor"></a><!--
+              --><span class="tag C">C1.循環經濟</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="e2jTcNfosW1" name="e2jTcNfosW1" href="https://www.mccormick.northwestern.edu/news/articles/2020/02/atomic-dance-reveals-new-insights-into-performance-of-2d-materials.html" target="_blank">‘Atomic Dance’ Reveals New Insights into Performance of 2D Materials</a><!--
+                --><span class="source">(<i>Northwestern University Engineering News</i>, Feb 11, 2020)</span><!--
+              --><a id="C2.智慧製造" name="C2.智慧製造" class="tag-anchor"></a><!--
+              --><span class="tag C">C2.智慧製造</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="1D47S8hQW4V" name="1D47S8hQW4V" href="http://news.rice.edu/2020/02/12/graphene-forms-under-microscopes-eye-2/" target="_blank">Graphene forms under microscope’s eye</a><!--
+                --><span class="source">(<i>Rice University News</i>, Feb 12, 2020)</span><!--
+              --><a id="C1.循環經濟" name="C1.循環經濟" class="tag-anchor"></a><!--
+              --><span class="tag C">C1.循環經濟</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="2MjA7w8gMSu" name="2MjA7w8gMSu" href="https://news.northeastern.edu/2020/02/18/this-nanomaterial-could-be-our-best-tool-to-make-renewable-energy-cheaper/" target="_blank">This could be our best tool to make renewable energy cheaper</a><!--
+                --><span class="source">(<i>Northeastern University News</i>, Feb 18, 2020)</span><!--
+              --><a id="C1.循環經濟" name="C1.循環經濟" class="tag-anchor"></a><!--
+              --><span class="tag C">C1.循環經濟</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="ovF5Zq4QMJv" name="ovF5Zq4QMJv" href="https://phys.org/news/2020-02-method-isolate-atomic-sheets-materials.html" target="_blank">Researchers develop new method to isolate atomic sheets and create new materials</a><!--
+                --><span class="source">(<i>PHY.ORG</i>, Feb 20, 2020)</span><!--
+              --><a id="C1.循環經濟" name="C1.循環經濟" class="tag-anchor"></a><!--
+              --><span class="tag C">C1.循環經濟</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="5ZbsNLqip3H" name="5ZbsNLqip3H" href="https://spectrum.ieee.org/energywise/energy/batteries-storage/ion-storage-systems-ceramic-electrolyte-news-solid-state-batteries" target="_blank">Ion Storage Systems Says Its Ceramic Electrolyte Could Be a Gamechanger for Solid-State Batteries</a><!--
                 --><span class="source">(<i>IEEE Spectrum</i>, Feb 21, 2020)</span><!--
-              --><a id="C3.綠能系統與環境科技" class="tag-ancher"></a><!--
-              --><span class="tag C3.綠能系統與環境科技">C3.綠能系統與環境科技</span><!--
+              --><a id="C3.綠能系統與環境科技" name="C3.綠能系統與環境科技" class="tag-anchor"></a><!--
+              --><span class="tag C">C3.綠能系統與環境科技</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="IBIjbxg8C7" href="https://techxplore.com/news/2020-02-hub-offshore-industry.html" target="_blank">Developer to open hub to grow U.S. offshore wind industry</a><!--
+                <a id="JlXyTr6whTR" name="JlXyTr6whTR" href="https://techxplore.com/news/2020-02-hub-offshore-industry.html" target="_blank">Developer to open hub to grow U.S. offshore wind industry</a><!--
                 --><span class="source">(<i>TechXplore</i>, Feb 29, 2020)</span><!--
-              --><a id="C3.綠能系統與環境科技" class="tag-ancher"></a><!--
-              --><span class="tag C3.綠能系統與環境科技">C3.綠能系統與環境科技</span><!--
+              --><a id="C3.綠能系統與環境科技" name="C3.綠能系統與環境科技" class="tag-anchor"></a><!--
+              --><span class="tag C">C3.綠能系統與環境科技</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="R910fc5TYM" href="http://news.mit.edu/2020/using-light-put-twist-electrons-0226" target="_blank">Using light to put a twist on electrons</a><!--
+                <a id="-KWBCXUVvpx" name="-KWBCXUVvpx" href="https://3dprintingindustry.com/news/from-residual-mcdonalds-cooking-oil-to-3d-printing-resin-168264/" target="_blank">From residual McDonald&#x27;s cooking oil to 3D printing resin</a><!--
+                --><span class="source">(<i>3DPrinting Industry</i>, Feb 7, 2020)</span><!--
+              --><a id="C2.智慧製造" name="C2.智慧製造" class="tag-anchor"></a><!--
+              --><span class="tag C">C2.智慧製造</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="oTxrmlIOG65" name="oTxrmlIOG65" href="http://news.mit.edu/2020/using-light-put-twist-electrons-0226" target="_blank">Using light to put a twist on electrons</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 26, 2020)</span><!--
 -->
               </li>
               <li class="content">
-                <a name="rNrAyEwWoA" href="https://matse.illinois.edu/news/breaking-temperature-barrier-small-scale-materials-testing" target="_blank">Breaking the temperature barrier in small-scale materials testing</a><!--
+                <a id="MxkRZUzIwaG" name="MxkRZUzIwaG" href="https://matse.illinois.edu/news/breaking-temperature-barrier-small-scale-materials-testing" target="_blank">Breaking the temperature barrier in small-scale materials testing</a><!--
                 --><span class="source">(<i>University of Illinois News</i>, Feb 25, 2020)</span><!--
 -->
               </li>
               <li class="content">
-                <a name="5mVB64R7cf" href="https://news.psu.edu/story/609816/2020/02/25/research/when-bonding-noble-metals-2d-materials-interfaces-matter" target="_blank">When bonding noble metals to 2D materials, interfaces matter</a><!--
+                <a id="jy9OfaqZ7he" name="jy9OfaqZ7he" href="https://news.psu.edu/story/609816/2020/02/25/research/when-bonding-noble-metals-2d-materials-interfaces-matter" target="_blank">When bonding noble metals to 2D materials, interfaces matter</a><!--
                 --><span class="source">(<i>Purdue University News</i>, Feb 25, 2020)</span><!--
 -->
               </li>
           </ol>
-          <h3 class="category-name"><a id="T.共通基礎技術"/>T.共通基礎技術</h3>
+          <h3 class="category-name"><a id="T.共通基礎技術" name="T.共通基礎技術"/>T.共通基礎技術</h3>
           <ol class="content-list">
               <li class="content">
-                <a name="tc-RArLdat" href="https://syncedreview.com/2020/02/05/using-rotation-translation-and-cropping-to-boost-generalization-in-deep-reinforcement-learning-models/" target="_blank">Using Rotation, Translation, and Cropping to Boost Generalization in Deep Reinforcement Learning Models</a><!--
+                <a id="HpStq4TgjfW" name="HpStq4TgjfW" href="https://syncedreview.com/2020/02/05/using-rotation-translation-and-cropping-to-boost-generalization-in-deep-reinforcement-learning-models/" target="_blank">Using Rotation, Translation, and Cropping to Boost Generalization in Deep Reinforcement Learning Models</a><!--
                 --><span class="source">(<i>Synced</i>, Feb 5, 2020)</span><!--
-              --><a id="T1.人工智慧技術" class="tag-ancher"></a><!--
-              --><span class="tag T1.人工智慧技術">T1.人工智慧技術</span><!--
+              --><a id="T1.人工智慧技術" name="T1.人工智慧技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T1.人工智慧技術</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="ThfTLera8a" href="https://www.technologyreview.com/f/615150/facebooks-radioactive-data-tracks-the-images-used-to-train-an-ai/" target="_blank">Facebook’s “radioactive data” tracks the images used to train an AI</a><!--
-                --><span class="source">(<i>MIT Tech Review</i>, Feb 6, 2020)</span><!--
-              --><a id="T1.人工智慧技術" class="tag-ancher"></a><!--
-              --><span class="tag T1.人工智慧技術">T1.人工智慧技術</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="LzYEpyXu2c" href="http://news.mit.edu/2020/mirrored-chip-could-enable-handheld-dark-field-microscopes-0224" target="_blank">Mirrored chip could enable handheld dark-field microscopes</a><!--
-                --><span class="source">(<i>MIT News</i>, Feb 24, 2020)</span><!--
-              --><a id="T2.半導體晶片技術" class="tag-ancher"></a><!--
-              --><span class="tag T2.半導體晶片技術">T2.半導體晶片技術</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="raBK7Srbxn" href="http://news.mit.edu/2020/flexible-electronics-stacks-chips-0205" target="_blank">Engineers mix and match materials to make new stretchy electronics</a><!--
-                --><span class="source">(<i>MIT News</i>, Feb 5, 2020)</span><!--
-              --><a id="T2.半導體晶片技術" class="tag-ancher"></a><!--
-              --><span class="tag T2.半導體晶片技術">T2.半導體晶片技術</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="4y3gFDiLa1" href="https://spectrum.ieee.org/tech-talk/telecom/security/personal-virtual-networks-control-data" target="_blank">Personal Virtual Networks Could Give Everyone More Control Over Their Data</a><!--
-                --><span class="source">(<i>IEEE Spectrum</i>, Feb 14, 2020)</span><!--
-              --><a id="T2.半導體晶片技術" class="tag-ancher"></a><!--
-              --><span class="tag T2.半導體晶片技術">T2.半導體晶片技術</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="yIcR1mGzj" href="https://www.brown.edu/news/2020-02-04/molecules" target="_blank">Researchers report progress on molecular data storage system</a><!--
-                --><span class="source">(<i>Brown University</i>, Feb 4, 2020)</span><!--
-              --><a id="T2.半導體晶片技術" class="tag-ancher"></a><!--
-              --><span class="tag T2.半導體晶片技術">T2.半導體晶片技術</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="PZb3AVV6I" href="https://techxplore.com/news/2020-02-dna-like-material-smaller-transistors.html" target="_blank">DNA-like material could bring even smaller transistors</a><!--
-                --><span class="source">(<i>TechXplore</i>, Feb 10, 2020)</span><!--
-              --><a id="T2.半導體晶片技術" class="tag-ancher"></a><!--
-              --><span class="tag T2.半導體晶片技術">T2.半導體晶片技術</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="1f0hzojbg" href="https://www.sciencedaily.com/releases/2020/02/200212150132.htm" target="_blank">New air-pressure sensor could improve everyday devices</a><!--
-                --><span class="source">(<i>Science Daily</i>, Feb 12, 2020)</span><!--
-              --><a id="T2.半導體晶片技術" class="tag-ancher"></a><!--
-              --><span class="tag T2.半導體晶片技術">T2.半導體晶片技術</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="15j7ptw37" href="https://ucsdnews.ucsd.edu/pressrelease/new-chip-brings-ultra-low-power-wi-fi-connectivity-to-iot-devices" target="_blank">New Chip Brings Ultra-Low Power Wi-Fi Connectivity to IoT Devices</a><!--
-                --><span class="source">(<i>UC San Diego News</i>, Feb 17, 2020)</span><!--
-              --><a id="T2.半導體晶片技術" class="tag-ancher"></a><!--
-              --><span class="tag T2.半導體晶片技術">T2.半導體晶片技術</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="ybNlgQD1-H" href="https://spectrum.ieee.org/tech-talk/semiconductors/processors/lowpower-ai-startup-eta-compute-delivers-first-commercial-chips" target="_blank">Low-Power AI Startup Eta Compute Delivers First Commercial Chips</a><!--
-                --><span class="source">(<i>IEEE Spectrum</i>, Feb 13, 2020)</span><!--
-              --><a id="T2.半導體晶片技術" class="tag-ancher"></a><!--
-              --><span class="tag T2.半導體晶片技術">T2.半導體晶片技術</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="9n0o0-nMYb" href="https://spectrum.ieee.org/tech-talk/telecom/wireless/laser-lifi-could-send-data-speeds-soaring" target="_blank">Laser LiFi Could Send Data Speeds Soaring</a><!--
-                --><span class="source">(<i>IEEE Spectrum</i>, Feb 4, 2020)</span><!--
-              --><a id="T3.通訊技術" class="tag-ancher"></a><!--
-              --><span class="tag T3.通訊技術">T3.通訊技術</span><!--
-                -->
-              </li>
-              <li class="content">
-                <a name="jsNPufFvSh" href="http://news.mit.edu/2020/cryptographic-tag-supply-chain-0220" target="_blank">Cryptographic “tag of everything” could protect the supply chain</a><!--
+                <a id="J7nNErp29cO" name="J7nNErp29cO" href="http://news.mit.edu/2020/cryptographic-tag-supply-chain-0220" target="_blank">Cryptographic “tag of everything” could protect the supply chain</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 20, 2020)</span><!--
-              --><a id="T4.資安與雲端技術" class="tag-ancher"></a><!--
-              --><span class="tag T4.資安與雲端技術">T4.資安與雲端技術</span><!--
+              --><a id="T4.資安與雲端技術" name="T4.資安與雲端技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T4.資安與雲端技術</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="M4b0wFrMFk" href="http://news.mit.edu/2020/protecting-sensitive-metadata-from-surveillance-0226" target="_blank">Protecting sensitive metadata so it can’t be used for surveillance</a><!--
+                <a id="PE42nhZ65_f" name="PE42nhZ65_f" href="http://news.mit.edu/2020/mirrored-chip-could-enable-handheld-dark-field-microscopes-0224" target="_blank">Mirrored chip could enable handheld dark-field microscopes</a><!--
+                --><span class="source">(<i>MIT News</i>, Feb 24, 2020)</span><!--
+              --><a id="T2.半導體晶片技術" name="T2.半導體晶片技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T2.半導體晶片技術</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="wZIGV1y1DHX" name="wZIGV1y1DHX" href="http://news.mit.edu/2020/protecting-sensitive-metadata-from-surveillance-0226" target="_blank">Protecting sensitive metadata so it can’t be used for surveillance</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 26, 2020)</span><!--
-              --><a id="T4.資安與雲端技術" class="tag-ancher"></a><!--
-              --><span class="tag T4.資安與雲端技術">T4.資安與雲端技術</span><!--
+              --><a id="T4.資安與雲端技術" name="T4.資安與雲端技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T4.資安與雲端技術</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="DcXtBDgMd" href="https://www.purdue.edu/newsroom/releases/2020/Q1/mixed-signal-hardware-security-thwarts-powerful-electromagnetic-attacks.html" target="_blank">Mixed-signal hardware security thwarts powerful electromagnetic attacks</a><!--
+                <a id="DVIQBZylb4k" name="DVIQBZylb4k" href="http://news.mit.edu/2020/flexible-electronics-stacks-chips-0205" target="_blank">Engineers mix and match materials to make new stretchy electronics</a><!--
+                --><span class="source">(<i>MIT News</i>, Feb 5, 2020)</span><!--
+              --><a id="T2.半導體晶片技術" name="T2.半導體晶片技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T2.半導體晶片技術</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="c2cnfAf3ADl" name="c2cnfAf3ADl" href="https://spectrum.ieee.org/tech-talk/telecom/security/personal-virtual-networks-control-data" target="_blank">Personal Virtual Networks Could Give Everyone More Control Over Their Data</a><!--
+                --><span class="source">(<i>IEEE Spectrum</i>, Feb 14, 2020)</span><!--
+              --><a id="T2.半導體晶片技術" name="T2.半導體晶片技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T2.半導體晶片技術</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="t21ohww-FvT" name="t21ohww-FvT" href="https://www.brown.edu/news/2020-02-04/molecules" target="_blank">Researchers report progress on molecular data storage system</a><!--
+                --><span class="source">(<i>Brown University</i>, Feb 4, 2020)</span><!--
+              --><a id="T2.半導體晶片技術" name="T2.半導體晶片技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T2.半導體晶片技術</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="-nS3MEGAl00" name="-nS3MEGAl00" href="https://techxplore.com/news/2020-02-dna-like-material-smaller-transistors.html" target="_blank">DNA-like material could bring even smaller transistors</a><!--
+                --><span class="source">(<i>TechXplore</i>, Feb 10, 2020)</span><!--
+              --><a id="T2.半導體晶片技術" name="T2.半導體晶片技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T2.半導體晶片技術</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="PO_Ie5FhVrz" name="PO_Ie5FhVrz" href="https://www.sciencedaily.com/releases/2020/02/200212150132.htm" target="_blank">New air-pressure sensor could improve everyday devices</a><!--
+                --><span class="source">(<i>Science Daily</i>, Feb 12, 2020)</span><!--
+              --><a id="T2.半導體晶片技術" name="T2.半導體晶片技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T2.半導體晶片技術</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="Ou4WJjvZSeX" name="Ou4WJjvZSeX" href="https://ucsdnews.ucsd.edu/pressrelease/new-chip-brings-ultra-low-power-wi-fi-connectivity-to-iot-devices" target="_blank">New Chip Brings Ultra-Low Power Wi-Fi Connectivity to IoT Devices</a><!--
+                --><span class="source">(<i>UC San Diego News</i>, Feb 17, 2020)</span><!--
+              --><a id="T2.半導體晶片技術" name="T2.半導體晶片技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T2.半導體晶片技術</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="1ypMj9PveVJ" name="1ypMj9PveVJ" href="https://www.purdue.edu/newsroom/releases/2020/Q1/mixed-signal-hardware-security-thwarts-powerful-electromagnetic-attacks.html" target="_blank">Mixed-signal hardware security thwarts powerful electromagnetic attacks</a><!--
                 --><span class="source">(<i>Purdue University News</i>, Feb 19, 2020)</span><!--
-              --><a id="T4.資安與雲端技術" class="tag-ancher"></a><!--
-              --><span class="tag T4.資安與雲端技術">T4.資安與雲端技術</span><!--
+              --><a id="T4.資安與雲端技術" name="T4.資安與雲端技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T4.資安與雲端技術</span><!--
                 -->
               </li>
               <li class="content">
-                <a name="jAH5wPbxvD" href="http://news.mit.edu/2020/correcting-errors-quantum-devices-0218" target="_blank">Correcting the “jitters” in quantum devices</a><!--
+                <a id="4TtLBIKuWPe" name="4TtLBIKuWPe" href="https://spectrum.ieee.org/tech-talk/telecom/wireless/laser-lifi-could-send-data-speeds-soaring" target="_blank">Laser LiFi Could Send Data Speeds Soaring</a><!--
+                --><span class="source">(<i>IEEE Spectrum</i>, Feb 4, 2020)</span><!--
+              --><a id="T3.通訊技術" name="T3.通訊技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T3.通訊技術</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="j1fscvDA_MD" name="j1fscvDA_MD" href="https://spectrum.ieee.org/tech-talk/semiconductors/processors/lowpower-ai-startup-eta-compute-delivers-first-commercial-chips" target="_blank">Low-Power AI Startup Eta Compute Delivers First Commercial Chips</a><!--
+                --><span class="source">(<i>IEEE Spectrum</i>, Feb 13, 2020)</span><!--
+              --><a id="T2.半導體晶片技術" name="T2.半導體晶片技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T2.半導體晶片技術</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="7to8jIfuHy4" name="7to8jIfuHy4" href="https://www.technologyreview.com/f/615150/facebooks-radioactive-data-tracks-the-images-used-to-train-an-ai/" target="_blank">Facebook’s “radioactive data” tracks the images used to train an AI</a><!--
+                --><span class="source">(<i>MIT Tech Review</i>, Feb 6, 2020)</span><!--
+              --><a id="T1.人工智慧技術" name="T1.人工智慧技術" class="tag-anchor"></a><!--
+              --><span class="tag T">T1.人工智慧技術</span><!--
+                -->
+              </li>
+              <li class="content">
+                <a id="tSVEa4RbVxk" name="tSVEa4RbVxk" href="http://news.mit.edu/2020/correcting-errors-quantum-devices-0218" target="_blank">Correcting the “jitters” in quantum devices</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 18, 2020)</span><!--
 -->
               </li>
               <li class="content">
-                <a name="wM_ghw1Y7U" href="http://news.mit.edu/2020/patternex-machine-learning-cybersecurity-0221" target="_blank">A human-machine collaboration to defend against cyberattacks</a><!--
+                <a id="OKl9c-2Hjbw" name="OKl9c-2Hjbw" href="http://news.mit.edu/2020/patternex-machine-learning-cybersecurity-0221" target="_blank">A human-machine collaboration to defend against cyberattacks</a><!--
                 --><span class="source">(<i>MIT News</i>, Feb 21, 2020)</span><!--
 -->
               </li>
               <li class="content">
-                <a name="vQAfZ42ip3" href="https://venturebeat.com/2020/02/10/microsoft-trains-worlds-largest-transformer-language-model/" target="_blank">Microsoft trains world’s largest Transformer language model</a><!--
+                <a id="caZw0gXtHFz" name="caZw0gXtHFz" href="https://venturebeat.com/2020/02/10/microsoft-trains-worlds-largest-transformer-language-model/" target="_blank">Microsoft trains world’s largest Transformer language model</a><!--
                 --><span class="source">(<i>VentureBeat</i>, Feb 10, 2020)</span><!--
 -->
               </li>
@@ -840,7 +811,7 @@
         </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="WnYtNTDE" href="https://conferences.oreilly.com/artificial-intelligence/ai-ca" target="_blank">
+                  <a name="js1CVuwu0" href="https://conferences.oreilly.com/artificial-intelligence/ai-ca" target="_blank">
                     AI Conference 2020
                   </a>
                   <br />
@@ -854,7 +825,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="Z7QT1yVEe" href="https://www.gdconf.com/about" target="_blank">
+                  <a name="Mg-atBg5Cx" href="https://www.gdconf.com/about" target="_blank">
                     Game Developers Conference
                   </a>
                   <br />
@@ -868,7 +839,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="jLtgAox7M" href="https://www.nvidia.com/en-us/gtc/" target="_blank">
+                  <a name="S2rfAsG6eL" href="https://www.nvidia.com/en-us/gtc/" target="_blank">
                     GPU Technology Conference
                   </a>
                   <br />
@@ -882,7 +853,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="XL79Q0ICg" href="https://events.technologyreview.com/emtech/digital/20/" target="_blank">
+                  <a name="XDtWTNuV0p" href="https://events.technologyreview.com/emtech/digital/20/" target="_blank">
                     MIT&#x60;s EmTech Digital
                   </a>
                   <br />
@@ -896,7 +867,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="fRjfGryWL" href="https://youngstartup.com/west2020/" target="_blank">
+                  <a name="q2NzFvfMmP" href="https://youngstartup.com/west2020/" target="_blank">
                     VENTURE SUMMIT | WEST
                   </a>
                   <br />
@@ -910,7 +881,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="nQuQakZPy" href="https://www.bitcoin2020conference.com/" target="_blank">
+                  <a name="8yDiat2Lxj" href="https://www.bitcoin2020conference.com/" target="_blank">
                     Bitcoin 2020
                   </a>
                   <br />
@@ -924,7 +895,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="lDVxStzgi" href="https://www.intelportfolio.com/globalsummit/" target="_blank">
+                  <a name="gNbnbW37Y1" href="https://www.intelportfolio.com/globalsummit/" target="_blank">
                     Intel Global Capital Summit Winning 2020
                   </a>
                   <br />
@@ -938,7 +909,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="khOc_D74n" href="https://www.ibm.com/events/think/" target="_blank">
+                  <a name="rqdOOBu8QI" href="https://www.ibm.com/events/think/" target="_blank">
                     IBM Think
                   </a>
                   <br />
@@ -952,7 +923,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="Fnf0BYJRY" href="https://micromobility.io/micromobility-america" target="_blank">
+                  <a name="mRve82awDx" href="https://micromobility.io/micromobility-america" target="_blank">
                     Micromobility America
                   </a>
                   <br />
@@ -966,7 +937,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="Yz-6HgvX7p" href="https://cloud.withgoogle.com/next/sf" target="_blank">
+                  <a name="fK9xCWA3muC" href="https://cloud.withgoogle.com/next/sf" target="_blank">
                     Google Cloud Next
                   </a>
                   <br />
@@ -980,7 +951,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="x9Zba8ZwU9" href="https://events.cbinsights.com/future-of-fintech" target="_blank">
+                  <a name="c-ExPCf5Bpj" href="https://events.cbinsights.com/future-of-fintech" target="_blank">
                     Future of Fintech
                   </a>
                   <br />
@@ -994,7 +965,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="zSvx6_bRy" href="https://www.voiceofthecar.com/" target="_blank">
+                  <a name="UJ-aNxiTfJ" href="https://www.voiceofthecar.com/" target="_blank">
                     The 2020 Voice of the Car Summit
                   </a>
                   <br />
@@ -1008,7 +979,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="Mt-9OHxRV" href="https://saastrannual2020.squarespace.com/" target="_blank">
+                  <a name="K1U_ePeH1X" href="https://saastrannual2020.squarespace.com/" target="_blank">
                     SaaStr Annual 2020
                   </a>
                   <br />
@@ -1033,7 +1004,7 @@
         </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="2RRjl1TeZ" href="http://spacesymposium.org/?utm_source&#x3D;referral&amp;utm_medium&#x3D;banner&amp;utm_campaign&#x3D;space_news" target="_blank">
+                  <a name="Vz7_b5cPlG" href="http://spacesymposium.org/?utm_source&#x3D;referral&amp;utm_medium&#x3D;banner&amp;utm_campaign&#x3D;space_news" target="_blank">
                     36th Space Symposium
                   </a>
                   <br />
@@ -1047,7 +1018,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="QlLwRl8qI" href="https://losangeles.digitalsummit.com/" target="_blank">
+                  <a name="kj_78pX_aR" href="https://losangeles.digitalsummit.com/" target="_blank">
                     Digital Summit
                   </a>
                   <br />
@@ -1061,7 +1032,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="fAmgWQE33" href="https://worldnanotechnologyconference.com/" target="_blank">
+                  <a name="WzmvoLuQWk" href="https://worldnanotechnologyconference.com/" target="_blank">
                     2nd World Nanotechnology Conference
                   </a>
                   <br />
@@ -1075,7 +1046,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="H1co1Tohi0" href="https://www.electran.org/events/etatransact/about/" target="_blank">
+                  <a name="ywpbAQjxUtz" href="https://www.electran.org/events/etatransact/about/" target="_blank">
                     TRANSACT
                   </a>
                   <br />
@@ -1089,7 +1060,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="sqos6fgEYy" href="https://www.chatbotsummit.com/" target="_blank">
+                  <a name="GbKqgaCTTia" href="https://www.chatbotsummit.com/" target="_blank">
                     ChatBot Summit
                   </a>
                   <br />
@@ -1103,7 +1074,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="wDnGO--Hg" href="https://sigmod2020.org/" target="_blank">
+                  <a name="HOQW-HxJ-4" href="https://sigmod2020.org/" target="_blank">
                     2020 ACM SIGMOD/PODS Conference
                   </a>
                   <br />
@@ -1117,7 +1088,7 @@
               </tr>
               <tr class="table-item-row">
                 <td>
-                  <a name="nAzR8Ge2e" href="https://sc20.supercomputing.org/" target="_blank">
+                  <a name="Yw7QEIvovx" href="https://sc20.supercomputing.org/" target="_blank">
                     Supercomputing 2020
                   </a>
                   <br />

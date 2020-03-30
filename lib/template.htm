@@ -123,25 +123,20 @@
       font-size: 16px;
     }
 
-    .content-of-table {
-      width: 100%;
+    .content-of-table .header {
+      font-weight: 500;
+      text-align: center;
     }
 
-    .content-of-table.A\.智慧生活 th {
-      background-color: #ddecf5;
+    .content-of-table .item {
+      padding: 8px;
     }
 
-    .content-of-table.B\.健康樂活 th {
-      background-color: #f6d4b9;
-    }
-
-    .content-of-table.C\.永續環境 th {
-      background-color: #dae1c1;
-    }
-
-    .content-of-table.T\.共通基礎技術 th {
-      background-color: #cdd0ef;
-    }
+    {{#each techCategories}}
+      .content-of-table.{{this.code}} .header {
+        background-color: {{this.color}};
+      }
+    {{/each}}
 
     .content-list {
       font-size: 1em;
@@ -161,35 +156,17 @@
       padding: 5px;
     }
 
-    .tag-ancher {
+    .tag-anchor {
       position: absolute;
       top: -30px;
       left: 0;
     }
 
-    .tag.A1\.個人化裝置與服務,
-    .tag.A2\.自主移動系統,
-    .tag.A3\.智慧產業及服務 {
-      background-color: #ddecf5;
-    }
-
-    .tag.B1\.智慧醫療,
-    .tag.B2\.健康照護 {
-      background-color: #f6d4b9;
-    }
-
-    .tag.C1\.循環經濟,
-    .tag.C2\.智慧製造,
-    .tag.C3\.綠能系統與環境科技 {
-      background-color: #dae1c1;
-    }
-
-    .tag.T1\.人工智慧技術,
-    .tag.T2\.半導體晶片技術,
-    .tag.T3\.通訊技術,
-    .tag.T4\.資安與雲端技術 {
-      background-color: #cdd0ef;
-    }
+    {{#each techCategories}}
+      .tag.{{this.code}} {
+        background-color: {{this.color}};
+      }
+    {{/each}}
 
     .conf-table {
       font-size: 12px;
@@ -224,60 +201,49 @@
       <h1 class="warning">DO NOT E-MAIL THIS VERSION</h1>
     {{/unless}}
 
-    <h1 class="title">
-      {{general.title}}<br/>
-      {{general.subtitle}}
-      <img class="pixel" src="{{general.pixel}}"/>
-    </h1>
-    <h5 class="subtitle">
-      {{general.vol}}<br/>
-      工研院北美公司總經理　王韶華<br/>
-      編輯　{{general.author}}
-    </h5>
+    {{#with general}}
+      {{#if title}}
+      <h1 class="title">
+        {{title}}
+        <img class="pixel" src="{{general.pixel}}"/>
+      </h1>
+      {{/if}}
+      {{#if subtitle}}
+      <h1 class="title">
+        {{subtitle}}
+      </h1>
+      {{/if}}
+      <h5 class="subtitle">
+        {{vol}}<br/>
+        工研院北美公司總經理　王韶華<br/>
+        編輯　{{author}}
+      </h5>
+    {{/with}}
 
-    <table class="content-of-table A.智慧生活">
-      <tr><th><a href="#A.智慧生活">A.智慧生活</a></th></tr>
-      <tr><td><a href="#A1.個人化裝置與服務">A1.個人化裝置與服務</a></td></tr>
-      <tr><td><a href="#A2.自主移動系統">A2.自主移動系統</a></td></tr>
-      <tr><td><a href="#A3.智慧產業及服務">A3.智慧產業及服務</a></td></tr>
-    </table>
-
-    <table class="content-of-table B.健康樂活">
-      <tr><th><a href="#B.健康樂活">B.健康樂活</a></th></tr>
-      <tr><td><a href="#B1.智慧醫療">B1.智慧醫療</a></td></tr>
-      <tr><td><a href="#B2.健康照護">B2.健康照護</a></td></tr>
-    </table>
-
-    <table class="content-of-table C.永續環境">
-      <tr><th><a href="#C.永續環境">C.永續環境</a></th></tr>
-      <tr><td><a href="#C1.循環經濟">C1.循環經濟</a></td></tr>
-      <tr><td><a href="#C2.智慧製造">C2.智慧製造</a></td></tr>
-      <tr><td><a href="#C3.綠能系統與環境科技">C3.綠能系統與環境科技</a></td></tr>
-    </table>
-
-    <table class="content-of-table T.共通基礎技術">
-      <tr><th><a href="#T.共通基礎技術">T.共通基礎技術</a></th></tr>
-      <tr><td><a href="#T1.人工智慧技術">T1.人工智慧技術</a></td></tr>
-      <tr><td><a href="#T2.半導體晶片技術">T2.半導體晶片技術</a></td></tr>
-      <tr><td><a href="#T3.通訊技術">T3.通訊技術</a></td></tr>
-      <tr><td><a href="#T4.資安與雲端技術">T4.資安與雲端技術</a></td></tr>
-    </table>
+    {{#each techCategories}}
+      <div class="content-of-table {{this.code}}">
+        <div class="header item"><a href="#{{this.name}}">{{this.name}}</a></div>
+      {{#each this.xn}}
+        <div class="item"><a href="#{{this}}">{{this}}</a></div>
+      {{~/each~}}
+      </div>
+    {{/each}}
 
     <hr/>
 
     <h2 class="section-title">科技訊息</h2>
     {{#each techCategories as |category|}}
-      {{#withItem ../technology key=category}}
+      {{#withItem ../technology key=category.name}}
         {{#if this}}
-          <h3 class="category-name"><a id="{{category}}"/>{{category}}</h3>
+          <h3 class="category-name"><a id="{{category.name}}" name="{{category.name}}"/>{{category.name}}</h3>
           <ol class="content-list">
             {{#each this}}
               <li class="content">
-                <a name="{{id}}" href="{{url}}" target="_blank">{{title}}</a><!--
+                <a id="{{id}}" name="{{id}}" href="{{url}}" target="_blank">{{title}}</a><!--
                 --><span class="source">(<i>{{source}}</i>, {{formatDate date}})</span><!--
                 {{#each tags}}
-              --><a id="{{this}}" class="tag-ancher"></a><!--
-              --><span class="tag {{this}}">{{this}}</span><!--
+              --><a id="{{this.name}}" name="{{this.name}}" class="tag-anchor"></a><!--
+              --><span class="tag {{this.code}}">{{this.name}}</span><!--
                 {{/each}}-->
               </li>
             {{/each}}
