@@ -222,9 +222,9 @@
 
     {{#each techCategories}}
       <div class="content-of-table {{this.code}}">
-        <div class="header item"><a href="#{{this.name}}">{{this.name}}</a></div>
+        <div class="header item"><a href="#{{this.code}}">{{this.name}}</a></div>
       {{#each this.xn}}
-        <div class="item"><a href="#{{this}}">{{this}}</a></div>
+        <div class="item"><a href="#{{this.code}}">{{this.name}}</a></div>
       {{~/each~}}
       </div>
     {{/each}}
@@ -235,14 +235,14 @@
     {{#each techCategories as |category|}}
       {{#withItem ../technology key=category.name}}
         {{#if this}}
-          <h3 class="category-name"><a id="{{category.name}}" name="{{category.name}}"/>{{category.name}}</h3>
+          <h3 class="category-name"><a id="{{category.code}}" name="{{category.code}}"/>{{category.name}}</h3>
           <ol class="content-list">
             {{#each this}}
               <li class="content">
                 <a id="{{id}}" name="{{id}}" href="{{url}}" target="_blank">{{title}}</a><!--
                 --><span class="source">(<i>{{source}}</i>, {{formatDate date}})</span><!--
                 {{#each tags}}
-              --><a id="{{this.name}}" name="{{this.name}}" class="tag-anchor"></a><!--
+              --><a id="{{this.code2}}" name="{{this.code2}}" class="tag-anchor"></a><!--
               --><span class="tag {{this.code}}">{{this.name}}</span><!--
                 {{/each}}-->
               </li>
