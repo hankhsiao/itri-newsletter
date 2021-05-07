@@ -20,7 +20,7 @@
     "node-branch-io": "^2.0.0",
     "request": "^2.87.0",
     "shortid": "^2.2.12",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   },
   "license": "BSD"
 }
