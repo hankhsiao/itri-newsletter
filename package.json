@@ -18,6 +18,7 @@
     "handlebars": "^4.0.11",
     "inline-css": "^2.4.0",
     "node-branch-io": "^2.0.0",
+    "package": "^1.0.1",
     "request": "^2.87.0",
     "shortid": "^2.2.12",
     "underscore": "^1.9.1"
